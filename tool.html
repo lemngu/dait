@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>디자인 툴 목록</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="./tool.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="category"></div>
+        <div id="wrap">
+            <!-- gird 삽입 -->
+        </div>
+    </div>
+
+    <template id="item-template">
+        <div class="item">
+            <div class="thumbnail"></div>
+            <div class="content">
+                <h5>타이틀</h5>
+                <div class="tag-list">
+                    <div class="tag">태그</div>
+                </div>
+                <p>설명</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="./tool.js"></script>
+</body>
+
+</html>
