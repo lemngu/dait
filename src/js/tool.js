@@ -4,7 +4,7 @@ const itemTemplate = document.getElementById("item-template");
 
 const categoryItems = [];
 
-fetch("./tools.json")
+fetch("../src/data/tools.json") // tool.html 위치 기준
     .then((res) => res.json())
     .then((categories) => {
         categories.forEach((cat, index) => {
