@@ -4,7 +4,7 @@ const itemTemplate = document.getElementById("item-template");
 
 const categoryItems = [];
 
-fetch("/public/tools.json")
+fetch("./tools.json")
     .then((res) => res.json())
     .then((categories) => {
         categories.forEach((cat, index) => {
