@@ -100,93 +100,58 @@
         "icon": "fa-solid fa-vector-square",
         "items": [
             {
-                "thumbnail": "./src/png/vector-1.png",
+                "thumbnail": "./src/assets/images/vector-1.png",
                 "title": "Adobe Illustrator",
-                "tags": [
-                    "일러스트",
-                    "로고제작",
-                    "유료"
-                ],
+                "tags": ["벡터디자인", "일러스트", "로고제작", "유료"],
                 "description": "벡터 기반 디자인의 대표 툴로, 로고, 아이콘, 인쇄물 등 다양한 작업에 최적화되어 있어 전문가들이 널리 사용합니다."
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
+                "thumbnail": "./src/assets/images/vector-2.png",
                 "title": "Affinity Designer",
-                "tags": [
-                    "벡터툴",
-                    "일회경제",
-                    "유료"
-                ],
+                "tags": ["벡터디자인", "래스터지원", "일회결제", "유료"],
                 "description": "Illustrator의 대안으로, 직관적인 인터페이스와 강력한 기능을 제공하는 벡터 및 래스터 겸용 디자인 툴입니다."
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
+                "thumbnail": "./src/assets/images/vector-3.png",
                 "title": "Inkscape",
-                "tags": [
-                    "벡터편집",
-                    "오픈소스",
-                    "무료"
-                ],
-                "description": "오픈소스로 제공되는 벡터 디자인 툴로, 일러스트, 로고 제작, 다이어그램 등에 적합하며 다양한 확장 기능을 제공합니다."
+                "tags": ["벡터디자인", "오픈소스", "무료", "UI디자인"],
+                "description": "오픈소스로 제공되는 벡터 디자인 툴로, 일러스트, 로고, 아이콘, 다이어그램 제작에 적합하며 다양한 확장 기능을 제공합니다."
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
+                "thumbnail": "./src/assets/images/vector-4.png",
                 "title": "Gravit Designer",
-                "tags": [
-                    "웹벡터툴",
-                    "간단디자인",
-                    "무료/유료"
-                ],
+                "tags": ["웹앱지원", "벡터디자인", "간단디자인", "무료"],
                 "description": "웹과 데스크탑 모두에서 사용할 수 있는 벡터 디자인 툴로, 간단한 UI와 기본 기능을 무료로 이용할 수 있습니다."
-            },{
-                "thumbnail": "./src/png/vector-1.png",
-                "title": "Adobe Illustrator",
-                "tags": [
-                    "유료",
-                    "로고",
-                    "일러스트"
-                ],
-                "description": "벡터 그래픽 디자인의 표준 툴. 아트보드, 패스, 그리드 기능 완비"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
-                "tags": [
-                    "무료",
-                    "아이콘",
-                    "UI"
-                ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "thumbnail": "./src/assets/images/vector-5.png",
+                "title": "Vectr",
+                "tags": ["웹앱지원", "실시간협업", "벡터디자인", "무료"],
+                "description": "실시간 협업이 가능한 브라우저 기반 벡터 디자인 툴로, 초보자도 쉽게 사용할 수 있도록 설계되어 있습니다."
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
-                "tags": [
-                    "무료",
-                    "아이콘",
-                    "UI"
-                ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "thumbnail": "./src/assets/images/vector-6.png",
+                "title": "Boxy SVG",
+                "tags": ["SVG편집", "웹디자인", "아이콘제작", "유료"],
+                "description": "SVG 포맷 중심의 벡터 편집 툴로, 웹디자인과 아이콘 작업에 적합하며 크롬 확장 프로그램으로도 제공됩니다."
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
-                "tags": [
-                    "무료",
-                    "아이콘",
-                    "UI"
-                ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "thumbnail": "./src/assets/images/vector-7.png",
+                "title": "Sketch",
+                "tags": ["UI디자인", "벡터디자인", "Mac전용", "유료"],
+                "description": "Mac 전용의 UI/벡터 디자인 툴로, 디자인 시스템과 프로토타이핑 작업에 최적화되어 있어 UXUI 디자이너에게 인기 있습니다."
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
-                "tags": [
-                    "무료",
-                    "아이콘",
-                    "UI"
-                ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "thumbnail": "./src/assets/images/vector-8.png",
+                "title": "CorelDRAW",
+                "tags": ["벡터디자인", "출판인쇄", "전문툴", "유료"],
+                "description": "출판과 인쇄에 강점을 가진 전문 벡터 그래픽 툴로, 다양한 인쇄 산업에서 널리 사용됩니다."
+            },
+            {
+                "thumbnail": "./src/assets/images/vector-9.png",
+                "title": "Figma",
+                "tags": ["UI디자인", "벡터디자인", "실시간협업", "무료/유료"],
+                "description": "원래는 UI디자인 툴로 알려졌지만, 벡터 기능이 강력해 일러스트 작업에도 활용 가능하며, 협업 기능이 탁월합니다."
             }
         ]
     },
