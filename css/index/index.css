@@ -6,7 +6,7 @@
 }
 
 :root {
-  /* Font families */
+    /* Font families */
     --font-sans: 'Pretendard';
 
     /* Display */
@@ -71,7 +71,7 @@ footer {
     gap: 24px;
 }
 
-/* 네비게이션 */
+/* 1. 네비게이션 */
 .nav {
     background: inherit;
     position: sticky;
@@ -79,7 +79,7 @@ footer {
     z-index: 100;
     width: 100%;
     background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(12px); 
+    backdrop-filter: blur(12px);
     padding: 20px 0;
 }
 
@@ -89,17 +89,60 @@ footer {
     align-items: center;
     gap: 24px;
 }
-/* 
+
+
 .nav .logo {
     grid-column: span 3;
-} */
-/* 
+}
+
 .nav .nav-menu {
     grid-column: span 9;
     text-align: right;
-} */
+}
 
-/* 히어로 */
+/* 배경 원형 */
+.floating-icons-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.circle {
+    position: absolute;
+    width: 880px;
+    height: 880px;
+    background: red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: float 4s ease-in-out infinite alternate;
+}
+
+/* 원형 위치 */
+.circle-1 {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%) rotate(120deg);
+    background: radial-gradient(55.24% 55.24% at 58.39% 42.84%, rgba(255, 255, 255, 0.00) 48.25%, rgba(255, 255, 255, 0.00) 48.35%, rgba(222, 236, 213, 0.30) 76.34%, rgba(162, 232, 237, 0.55) 100%);
+    animation-delay: 0s;
+}
+
+.circle-2 {
+    top: 50%;
+    left: 25%;
+    animation-delay: 1.5s;
+}
+
+.circle-3 {
+    top: 30%;
+    right: 10%;
+    animation-delay: 3s;
+}
+
+/* 2. 히어로 섹션 */
 .hero {
     padding: 160px 0 100px 0;
     position: relative;
@@ -118,44 +161,6 @@ footer {
     font-weight: 500;
     z-index: 1;
     position: relative;
-}
-
-/* 회전하는 아이콘 */
-.floating-icons {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 100%;
-    max-width: 800px;
-    transform: translateX(-50%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.icon {
-    width: 40px;
-    height: 40px;
-    background: #d6d6d6;
-    border-radius: 8px;
-    animation: floatRotate 6s linear infinite;
-}
-
-@keyframes floatRotate {
-    0% {
-        transform: rotate(0deg) translateY(0);
-    }
-
-    50% {
-        transform: rotate(15deg) translateY(-10px);
-    }
-
-    100% {
-        transform: rotate(0deg) translateY(0);
-    }
 }
 
 /* 카드 영역 */
@@ -201,6 +206,61 @@ footer {
     font-weight: 500;
 }
 
+/* 3. 큐레이션 섹션 */
+
+.curation {
+    height: 840px;
+    display: flex;
+    align-items: center;
+    padding: 0; /* 패딩 제거 */
+    position: relative;
+    overflow: hidden;
+}
+
+.curation .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+}
+
+.curation-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.curation-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.curation-list-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.curation-list-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+    overflow: hidden;
+}
+
+.curation-card {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.curation-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 /* 4. 커뮤니티 섹션 */
 .community {
