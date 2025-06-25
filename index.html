@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DaItJanner</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/PretendardVariable.woff2" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!--GSAP & ScrollToPlugin-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
+  <!--Swiper-->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+
+  <!--Lodash-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+  <script defer src="/main.js"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="inner">
+
+      <ul class="menu">
+        <li class="daitjanner-logo"><a href="javascript:void(0)">다이자너</a></li>
+        <li><a href="javascript:void(0)">툴</a></li>
+        <li><a href="javascript:void(0)">리소스</a></li>
+        <li><a href="javascript:void(0)">큐레이션</a></li>
+        <li><a href="javascript:void(0)">커뮤니티</a></li>
+        <li class="search-starter"><a href="javascript:void(0)">검색</a></li>
+        <li class="login-starter"><a href="javascript:void(0)">로그인</a></li>
+      </ul>
+    
+    <div class="search-wrap">
+      <div class="inner">
+        <div class="search">
+          <div class="shadow"></div>
+          <div class="textfield">
+          <input type="text" placeholder="통합검색" />
+          <div class="search-icon"></div>
+          </div>
+          <div class="autocompletes">
+            <h3>빠른 링크</h3>
+            <ul>
+              <li><a href="javascript:void(0)">Apple Store Online에서 쇼핑하기</a></li>
+              <li><a href="javascript:void(0)">Apple Vision Pro</a></li>
+              <li><a href="javascript:void(0)">AirPods</a></li>
+              <li><a href="javascript:void(0)">Apple Store Online 이벤트</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>        
+        
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="inner">
+      <h1 class="bgtext">모든 디자이너의 연결고리,다잇자너</h1>
+      <h2 class="bgtext">필요한 리소스,정보,커뮤니티까지</h2>
+      <img src="/images/floating1_ae.png" alt="tool-icon" class="floating floating1" />
+      <img src="/images/floating2_ai.png" alt="tool-icon" class="floating floating2" />
+      <img src="/images/floating3_an.png" alt="tool-icon" class="floating floating3" />
+      <img src="/images/floating4_ch.png" alt="tool-icon" class="floating floating4" />
+      <img src="/images/floating5_ds.png" alt="tool-icon" class="floating floating5" />
+      <img src="/images/floating6_id.png" alt="tool-icon" class="floating floating6" />
+      <img src="/images/floating7_pr.png" alt="tool-icon" class="floating floating7" />
+      <img src="/images/floating8_xd.png" alt="tool-icon" class="floating floating8" />
+    </div>
+  </section>
+  <section class="tool-card">
+    <div class="inner">
+      <div class="card1">
+        <div class="front1">
+          <img src="/images/card1-front.png" alt="" />
+        </div>
+        <div class="back1">
+          <img src="/images/card1-back.png" alt="" />
+          <a href="javascript:void(0)" class="btn">
+            바로가기
+          </a>
+        </div>
+      </div>
+      <div class="card2">
+        <div class="front2">
+          <img src="/images/card2-front.png" alt="" />
+        </div>
+        <div class="back2">
+          <img src="/images/card2-back.png" alt="" />
+          <a href="javascript:void(0)" class="btn">
+            바로가기
+          </a>
+        </div>
+      </div>
+      <div class="card3">
+        <div class="front3">
+          <img src="/images/card3-front.png" alt="" />
+        </div>
+        <div class="back3">
+          <img src="/images/card3-back.png" alt="" />
+          <a href="javascript:void(0)" class="btn">
+            바로가기
+          </a>
+        </div>
+      </div>      
+    </div>
+  </section>
+
+
+  <!-- Curation -->
+  <section class="curation">
+    <div class="curation-info">
+      <h2>큐레이션 소개</h2>
+      <p>
+        큐레이션이란 다양한 데이터를 선별해 사용자에게 맞는 정보를 제공합니다.<br />
+        저희 큐레이션 시스템은 사용자 중심의 정보 제공을 통해 더 나은 선택을 도와줍니다.
+      </p>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="/images/curation-img1.png" alt="슬라이드1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/images/curation-img2.png" alt="슬라이드1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/images/curation-img3.png" alt="슬라이드1" />
+        </div>      
+        <div class="swiper-slide">
+          <img src="/images/curation-img4.png" alt="슬라이드1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/images/curation-img5.png" alt="슬라이드1" />
+        </div> 
+        </div>      
+      </div>
+    </div>   
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img src="" alt="다잇자너 로고" class="footer-logo" />
+      </div>
+
+      <!-- 오른쪽: 카테고리 -->
+      <div class="footer-right">
+        <div class="footer-menu">
+          <h4>이용안내</h4>
+          <ul>
+            <li><a href="javascript:void(0)">크리에이터 가이드</a></li>
+            <li><a href="javascript:void(0)">저작물 거래 가이드</a></li>
+            <li><a href="javascript:void(0)">수수료 안내</a></li>
+            <li><a href="javascript:void(0)">KRYX 이용안내</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu">
+          <h4>문의하기</h4>
+          <ul>
+            <li><a href="javascript:void(0)">콘텐츠 제공 문의</a></li>
+            <li><a href="javascript:void(0)">사업 제휴 문의</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu">
+          <h4>정책</h4>
+          <ul>
+            <li><a href="javascript:void(0)">서비스이용약관</a></li>
+            <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+            <li><a href="javascript:void(0)">청소년보호정책</a></li>
+            <li><a href="javascript:void(0)">운영정책</a></li>
+            <li><a href="javascript:void(0)">환불 정책</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu">
+          <h4>고객센터</h4>
+          <button class="btn">문의하기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 텍스트 -->
+    <div class="footer-bottom">
+      <p>
+        대표전화: 1234-5678 | 이메일: acc01@kryx.kr | 주소: 서울 강남구 OO로00길 12 0층<br />
+        (주)크릭스 대표이사 : 송유림 | 사업자등록번호 : 123-45-67890
+      </p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
