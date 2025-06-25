@@ -59,18 +59,18 @@ const categoryGroups = [
     {
         name: 'design',
         categories: [
-            { key: 'ux-ui', name: '그래픽 디자이너' },
-            { key: 'ux-ui-2', name: '일러스트레이터' },
-            { key: 'motion', name: 'UX/UI 디자이너' },
-            { key: 'graphic', name: '3D 디자이너' }
+            { key: 'graphic', name: '그래픽 디자이너' },
+            { key: 'illustration', name: '일러스트레이터' },
+            { key: 'ux-ui', name: 'UX/UI 디자이너' },
+            { key: '3d', name: '3D 디자이너' }
         ]
     },
     {
         name: 'development',
         categories: [
-            { key: 'frontend', name: '영상 디자이너' },
-            { key: 'backend', name: '모션그래픽 디자이너' },
-            { key: 'database', name: '편집 디자이너' }
+            { key: 'video', name: '영상 디자이너' },
+            { key: 'motion', name: '모션그래픽 디자이너' },
+            { key: 'edition', name: '편집 디자이너' }
         ]
     }
 ];

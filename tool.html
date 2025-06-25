@@ -10,27 +10,36 @@
 </head>
 
 <body>
+    <div id="category">
+        <div class="category-inner">
+        </div>
+    </div>
     <div class="container">
-        <div id="category"></div>
+
         <div id="wrap">
             <!-- gird 삽입 -->
         </div>
-    </div>
 
-    <template id="item-template">
-        <div class="item">
-            <div class="thumbnail"></div>
-            <div class="content">
-                <h5>타이틀</h5>
-                <div class="tag-list">
-                    <div class="tag">태그</div>
+        <template id="item-template">
+            <div class="item">
+                <div class="thumbnail-frame">
+                    <a class="thumbnail-link" target="_blank">
+                        <div class="thumbnail"></div>
+                    </a>
                 </div>
-                <p>설명</p>
+                <div class="content">
+                    <div class="content-title">
+                        <h5>타이틀</h5>
+                        <div class="tag-list">
+                            <div class="tag">태그</div>
+                        </div>
+                    </div>
+                    <p>설명</p>
+                </div>
             </div>
-        </div>
-    </template>
+        </template>
 
-    <script src="/js/tool.js"></script>
+        <script src="/js/tool.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,8 @@
         "icon": "fa-solid fa-pen-nib",
         "items": [
             {
-                "thumbnail": "./src/png/photo-1.png",
+                "thumbnail": "./src/assets/images/tool/photo/photo-1.png",
+                "link": "https://www.adobe.com/kr/products/photoshop.html",
                 "title": "Adobe Photoshop",
                 "tags": [
                     "포토디자인",
@@ -14,7 +15,8 @@
                 "description": "전문 사진 편집 및 그래픽 디자인 툴로, 다양한 레이어 기능과 색상 보정 기능을 갖추고 있어 디자이너 및 사진작가에게 필수적인 툴입니다."
             },
             {
-                "thumbnail": "./src/png/photo-2.png",
+                "thumbnail": "./src/assets/images/tool/photo/photo-2.png",
+                "link": "https://affinity.serif.com/en-gb/photo/?srsltid=AfmBOopdlNH5O_RxkGe5z2PR6ZbiBfwbrXZU1cbL8HAFgabzwbM9v_bC",
                 "title": "affinity Photo",
                 "tags": [
                     "포토디자인",
@@ -24,7 +26,8 @@
                 "description": "포토샵의 대안으로 떠오른 전문 이미지 편집 툴로, 일회성 결제로 사용할 수 있으며 고급 보정 기능을 제공합니다."
             },
             {
-                "thumbnail": "./src/png/photo-3.png",
+                "thumbnail": "./src/assets/images/tool/photo/photo-3.png",
+                "link": "https://www.gimp.org/",
                 "title": "GIMP",
                 "tags": [
                     "이미지편집",
@@ -34,7 +37,8 @@
                 "description": "오픈소스로 제공되는 강력한 이미지 편집 툴로, 다양한 플러그인과 확장 기능을 통해 포토샵에 근접한 작업이 가능합니다."
             },
             {
-                "thumbnail": "./src/png/photo-2.png",
+                "thumbnail": "./src/assets/images/tool/photo/photo-4.png",
+                "link": "https://pixlr.com/kr/",
                 "title": "Prxlr X",
                 "tags": [
                     "웹편집툴",
@@ -44,7 +48,8 @@
                 "description": "브라우저 기반의 간단한 이미지 편집 툴로, 초보자도 손쉽게 사용할 수 있으며 기본 기능은 무료로 제공됩니다."
             },
             {
-                "thumbnail": "./src/png/photo-2.png",
+                "thumbnail": "./src/assets/images/tool/photo/photo-5.png",
+                "link": "https://www.getpaint.net/",
                 "title": "paint.NET",
                 "tags": [
                     "윈도우전용",
@@ -54,7 +59,8 @@
                 "description": "윈도우 기반의 간단한 이미지 편집 툴로, 기본적인 사진 편집과 필터 기능을 제공합니다."
             },
             {
-                "thumbnail": "./src/png/photo-3.png",
+                "thumbnail": "./src/assets/images/tool/photo/photo-6.png",
+                "link": "https://www.darktable.org/",
                 "title": "Darktable",
                 "tags": [
                     "사진보정",
@@ -64,7 +70,8 @@
                 "description": "RAW 사진을 전문적으로 편집할 수 있는 무료 오픈소스 툴로, 사진작가에게 적합합니다."
             },
             {
-                "thumbnail": "./src/png/photo-2.png",
+                "thumbnail": "./src/assets/images/tool/photo/photo-7.png",
+                "link": "http://www.photoscape.org/ps/main/index.php",
                 "title": "PhotoScape",
                 "tags": [
                     "GIF제작",
@@ -74,7 +81,8 @@
                 "description": "한국에서 많은 사랑을 받은 사진 편집 프로그램으로, 일괄 보정과 GIF 제작 등 다양한 기능을 제공합니다."
             },
             {
-                "thumbnail": "./src/png/photo-2.png",
+                "thumbnail": "./src/assets/images/tool/photo/photo-8.png",
+                "link": "https://krita.org/ko/",
                 "title": "Krita",
                 "tags": [
                     "디지털드로잉",
@@ -84,7 +92,8 @@
                 "description": "디지털 드로잉에 강점을 가진 오픈소스 툴로, 일러스트레이터와 이미지 디자이너 모두에게 적합합니다."
             },
             {
-                "thumbnail": "./src/png/photo-2.png",
+                "thumbnail": "./src/assets/images/tool/photo/photo-9.png",
+                "link": "https://helpx.adobe.com/kr/photoshop-express/get-started.html",
                 "title": "Adobe Photoshop Express",
                 "tags": [
                     "모바일편집",
@@ -100,58 +109,112 @@
         "icon": "fa-solid fa-vector-square",
         "items": [
             {
-                "thumbnail": "./src/assets/images/vector-1.png",
+                "thumbnail": "./src/assets/images/tool/vector/vector-1.png",
                 "title": "Adobe Illustrator",
-                "tags": ["벡터디자인", "일러스트", "로고제작", "유료"],
-                "description": "벡터 기반 디자인의 대표 툴로, 로고, 아이콘, 인쇄물 등 다양한 작업에 최적화되어 있어 전문가들이 널리 사용합니다."
+                "tags": [
+                    "벡터디자인",
+                    "일러스트",
+                    "로고제작",
+                    "유료"
+                ],
+                "description": "벡터 기반 디자인의 대표 툴로, 로고, 아이콘, 인쇄물 등 다양한 작업에 최적화되어 있어 전문가들이 널리 사용합니다.",
+                "link": "https://www.adobe.com/products/illustrator.html"
             },
             {
-                "thumbnail": "./src/assets/images/vector-2.png",
+                "thumbnail": "./src/assets/images/tool/vector/vector-2.png",
                 "title": "Affinity Designer",
-                "tags": ["벡터디자인", "래스터지원", "일회결제", "유료"],
-                "description": "Illustrator의 대안으로, 직관적인 인터페이스와 강력한 기능을 제공하는 벡터 및 래스터 겸용 디자인 툴입니다."
+                "tags": [
+                    "벡터디자인",
+                    "래스터지원",
+                    "일회결제",
+                    "유료"
+                ],
+                "description": "Illustrator의 대안으로, 직관적인 인터페이스와 강력한 기능을 제공하는 벡터 및 래스터 겸용 디자인 툴입니다.",
+                "link": "https://affinity.serif.com/en-us/designer/?srsltid=AfmBOorLPmdl8TtkXacb8SRhKVrcen6Ju5guES98wEUN_dPp3gjK-GtL"
             },
             {
-                "thumbnail": "./src/assets/images/vector-3.png",
+                "thumbnail": "./src/assets/images/tool/vector/vector-3.png",
                 "title": "Inkscape",
-                "tags": ["벡터디자인", "오픈소스", "무료", "UI디자인"],
-                "description": "오픈소스로 제공되는 벡터 디자인 툴로, 일러스트, 로고, 아이콘, 다이어그램 제작에 적합하며 다양한 확장 기능을 제공합니다."
+                "tags": [
+                    "벡터디자인",
+                    "오픈소스",
+                    "무료",
+                    "UI디자인"
+                ],
+                "description": "오픈소스로 제공되는 벡터 디자인 툴로, 일러스트, 로고, 아이콘, 다이어그램 제작에 적합하며 다양한 확장 기능을 제공합니다.",
+                "link": "https://inkscape.org/"
             },
             {
-                "thumbnail": "./src/assets/images/vector-4.png",
+                "thumbnail": "./src/assets/images/tool/vector/vector-4.png",
                 "title": "Gravit Designer",
-                "tags": ["웹앱지원", "벡터디자인", "간단디자인", "무료"],
-                "description": "웹과 데스크탑 모두에서 사용할 수 있는 벡터 디자인 툴로, 간단한 UI와 기본 기능을 무료로 이용할 수 있습니다."
+                "tags": [
+                    "웹앱지원",
+                    "벡터디자인",
+                    "간단디자인",
+                    "무료"
+                ],
+                "description": "웹과 데스크탑 모두에서 사용할 수 있는 벡터 디자인 툴로, 간단한 UI와 기본 기능을 무료로 이용할 수 있습니다.",
+                "link": "https://app.corelvector.com/"
             },
             {
-                "thumbnail": "./src/assets/images/vector-5.png",
+                "thumbnail": "./src/assets/images/tool/vector/vector-5.png",
                 "title": "Vectr",
-                "tags": ["웹앱지원", "실시간협업", "벡터디자인", "무료"],
-                "description": "실시간 협업이 가능한 브라우저 기반 벡터 디자인 툴로, 초보자도 쉽게 사용할 수 있도록 설계되어 있습니다."
+                "tags": [
+                    "웹앱지원",
+                    "실시간협업",
+                    "벡터디자인",
+                    "무료"
+                ],
+                "description": "실시간 협업이 가능한 브라우저 기반 벡터 디자인 툴로, 초보자도 쉽게 사용할 수 있도록 설계되어 있습니다.",
+                "link": "https://vectr.com/"
             },
             {
-                "thumbnail": "./src/assets/images/vector-6.png",
+                "thumbnail": "./src/assets/images/tool/vector/vector-6.png",
                 "title": "Boxy SVG",
-                "tags": ["SVG편집", "웹디자인", "아이콘제작", "유료"],
-                "description": "SVG 포맷 중심의 벡터 편집 툴로, 웹디자인과 아이콘 작업에 적합하며 크롬 확장 프로그램으로도 제공됩니다."
+                "tags": [
+                    "SVG편집",
+                    "웹디자인",
+                    "아이콘제작",
+                    "유료"
+                ],
+                "description": "SVG 포맷 중심의 벡터 편집 툴로, 웹디자인과 아이콘 작업에 적합하며 크롬 확장 프로그램으로도 제공됩니다.",
+                "link": "https://boxy-svg.com/"
             },
             {
-                "thumbnail": "./src/assets/images/vector-7.png",
+                "thumbnail": "./src/assets/images/tool/vector/vector-7.png",
                 "title": "Sketch",
-                "tags": ["UI디자인", "벡터디자인", "Mac전용", "유료"],
-                "description": "Mac 전용의 UI/벡터 디자인 툴로, 디자인 시스템과 프로토타이핑 작업에 최적화되어 있어 UXUI 디자이너에게 인기 있습니다."
+                "tags": [
+                    "UI디자인",
+                    "벡터디자인",
+                    "Mac전용",
+                    "유료"
+                ],
+                "description": "Mac 전용의 UI/벡터 디자인 툴로, 디자인 시스템과 프로토타이핑 작업에 최적화되어 있어 UXUI 디자이너에게 인기 있습니다.",
+                "link": "https://www.sketch.com/"
             },
             {
-                "thumbnail": "./src/assets/images/vector-8.png",
+                "thumbnail": "./src/assets/images/tool/vector/vector-8.png",
                 "title": "CorelDRAW",
-                "tags": ["벡터디자인", "출판인쇄", "전문툴", "유료"],
-                "description": "출판과 인쇄에 강점을 가진 전문 벡터 그래픽 툴로, 다양한 인쇄 산업에서 널리 사용됩니다."
+                "tags": [
+                    "벡터디자인",
+                    "출판인쇄",
+                    "전문툴",
+                    "유료"
+                ],
+                "description": "출판과 인쇄에 강점을 가진 전문 벡터 그래픽 툴로, 다양한 인쇄 산업에서 널리 사용됩니다.",
+                "link": "https://www.coreldraw.com/en/?srsltid=AfmBOorbt2QuYnHSXlpIWaBO5dOfPM6-gXq-Dh6AhmxLtAzTHZS7AE1z"
             },
             {
-                "thumbnail": "./src/assets/images/vector-9.png",
+                "thumbnail": "./src/assets/images/tool/vector/vector-9.png",
                 "title": "Figma",
-                "tags": ["UI디자인", "벡터디자인", "실시간협업", "무료/유료"],
-                "description": "원래는 UI디자인 툴로 알려졌지만, 벡터 기능이 강력해 일러스트 작업에도 활용 가능하며, 협업 기능이 탁월합니다."
+                "tags": [
+                    "UI디자인",
+                    "벡터디자인",
+                    "실시간협업",
+                    "무료/유료"
+                ],
+                "description": "원래는 UI디자인 툴로 알려졌지만, 벡터 기능이 강력해 일러스트 작업에도 활용 가능하며, 협업 기능이 탁월합니다.",
+                "link": "https://www.figma.com/files/team/1493615205953617914/recents-and-sharing?fuid=1047483048297332924"
             }
         ]
     },
@@ -160,44 +223,103 @@
         "icon": "fa-solid fa-laptop",
         "items": [
             {
-                "thumbnail": "./src/png/vector-1.png",
-                "title": "Adobe Illustrator",
+                "thumbnail": "./src/assets/images/tool/uxui/uxui-1.png",
+                "title": "Figma",
                 "tags": [
                     "유료",
                     "로고",
                     "일러스트"
                 ],
-                "description": "벡터 그래픽 디자인의 표준 툴. 아트보드, 패스, 그리드 기능 완비"
+                "description": "클라우드 기반의 UI/UX 디자인 및 협업 툴로, 실시간 협업 기능이 강력하며 프로토타이핑과 컴포넌트 시스템을 지원합니다.",
+                "link": "https://www.figma.com/files/team/1493615205953617914/recents-and-sharing?fuid=1047483048297332924"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/uxui/uxui-2.png",
+                "title": "Adobe XD",
                 "tags": [
                     "무료",
                     "아이콘",
                     "UI"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "Adobe에서 출시한 UI/UX 디자인 및 프로토타이핑 툴로, Adobe 생태계와 연동이 뛰어나고 간편한 인터페이스를 제공합니다.",
+                "link": "https://helpx.adobe.com/kr/xd/get-started.html"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/uxui/uxui-3.png",
+                "title": "Sketch",
                 "tags": [
                     "무료",
                     "아이콘",
                     "UI"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "Mac 전용 UI/UX 디자인 툴로, 디자인 시스템 구성과 벡터 작업에 특화되어 있으며 디자이너 커뮤니티에서도 활발히 사용됩니다.",
+                "link": "https://www.sketch.com/"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/uxui/uxui-4.png",
+                "title": "Framer",
                 "tags": [
                     "무료",
                     "아이콘",
                     "UI"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "코드 없는 인터랙티브 UI 디자인을 지원하는 툴로, 디자이너와 개발자의 협업을 돕는 직관적인 워크플로우를 제공합니다.",
+                "link": "https://www.framer.com/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/uxui/uxui-5.png",
+                "title": "ProtoPia",
+                "tags": [
+                    "유료",
+                    "로고",
+                    "일러스트"
+                ],
+                "description": "국산 프로토타이핑 툴로 정밀한 상호작용 구현이 가능하며, 디자이너 간 협업 및 사용자 테스트에 강점을 지닙니다.",
+                "link": "https://protopia.ai/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/uxui/uxui-6.png",
+                "title": "Axure RP",
+                "tags": [
+                    "무료",
+                    "아이콘",
+                    "UI"
+                ],
+                "description": "복잡한 인터랙션과 논리적 흐름을 구현할 수 있는 프로토타이핑 툴로, 정보 구조 설계에 특화되어 있습니다.",
+                "link": "https://www.axure.com/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/uxui/uxui-7.png",
+                "title": "UXPin",
+                "tags": [
+                    "무료",
+                    "아이콘",
+                    "UI"
+                ],
+                "description": "디자인 시스템을 기반으로 인터랙션 구현이 가능한 툴로, 개발자 연동이 뛰어나고 접근성 검사 기능을 지원합니다.",
+                "link": "https://www.uxpin.com/kr/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/uxui/uxui-8.png",
+                "title": "Zeplin",
+                "tags": [
+                    "무료",
+                    "아이콘",
+                    "UI"
+                ],
+                "description": "UI 디자인 결과물을 개발자와 효율적으로 공유할 수 있게 도와주는 협업 툴로, 스타일 가이드 추출이 쉽습니다.",
+                "link": "https://zeplin.io/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/uxui/uxui-9.png",
+                "title": "Origami Studio",
+                "tags": [
+                    "무료",
+                    "아이콘",
+                    "UI"
+                ],
+                "description": "Facebook에서 개발한 프로토타이핑 툴로, 복잡한 애니메이션과 논리 구현이 가능하며 코드 수준의 인터랙션을 제공합니다.",
+                "link": "https://origami.design/"
             }
         ]
     },
@@ -206,44 +328,103 @@
         "icon": "fa-solid fa-cube",
         "items": [
             {
-                "thumbnail": "./src/png/vector-1.png",
-                "title": "Adobe Illustrator",
+                "thumbnail": "./src/assets/images/tool/3d/3d-1.png",
+                "title": "Blender",
+                "tags": [
+                    "무료",
+                    "모델링",
+                    "렌더링"
+                ],
+                "description": "오픈소스로 제공되는 무료 3D 모델링, 애니메이션, 렌더링 툴로 전문가 수준의 작업이 가능하며 커뮤니티와 자료도 풍부합니다.",
+                "link": "https://www.blender.org/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/3d/3d-2.png",
+                "title": "Cinema 4D",
                 "tags": [
                     "유료",
-                    "로고",
-                    "일러스트"
+                    "모션그래픽",
+                    "렌더링"
                 ],
-                "description": "벡터 그래픽 디자인의 표준 툴. 아트보드, 패스, 그리드 기능 완비"
+                "description": "모션 그래픽과 비주얼 이펙트에 특화된 3D 툴로 직관적인 UI와 빠른 렌더링 속도로 영상 디자이너에게 많이 사용됩니다.",
+                "link": "https://www.maxon.net/en/cinema-4d"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/3d/3d-3.png",
+                "title": "Autodesk Maya",
                 "tags": [
-                    "무료",
-                    "아이콘",
-                    "UI"
+                    "유료",
+                    "애니메이션",
+                    "시뮬레이션"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "고급 3D 모델링과 시뮬레이션, 애니메이션 기능을 갖춘 전문 툴로 영화 및 게임 산업에서 널리 사용됩니다.",
+                "link": "https://www.autodesk.com/kr/products/maya/overview"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/3d/3d-4.png",
+                "title": "3ds Max",
                 "tags": [
-                    "무료",
-                    "아이콘",
-                    "UI"
+                    "유료",
+                    "건축",
+                    "시각화"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "건축 시각화와 제품 디자인에서 널리 사용되는 Autodesk의 3D 디자인 툴로, 실사 렌더링 기능이 뛰어납니다.",
+                "link": "https://www.autodesk.com/kr/products/3ds-max/overview"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/3d/3d-5.png",
+                "title": "ZBrush",
+                "tags": [
+                    "유료",
+                    "디지털조각",
+                    "캐릭터"
+                ],
+                "description": "디지털 조각에 특화된 3D 툴로, 유기적인 형태와 디테일을 표현할 때 강점을 가지며 게임 캐릭터 제작에 널리 사용됩니다.",
+                "link": "https://www.maxon.net/ko/zbrush"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/3d/3d-6.png",
+                "title": "Substance 3D Painter",
+                "tags": [
+                    "유료",
+                    "텍스처",
+                    "PBR"
+                ],
+                "description": "3D 텍스처링에 특화된 Adobe 툴로, 사실적인 재질 표현과 PBR 기반 렌더링에 강점을 가지고 있습니다.",
+                "link": "https://www.adobe.com/products/substance3d/apps/painter.html"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/3d/3d-7.png",
+                "title": "SketchUp",
+                "tags": [
+                    "부분무료",
+                    "건축",
+                    "인테리어"
+                ],
+                "description": "건축 및 인테리어 분야에서 널리 사용되는 3D 모델링 툴로, 직관적인 조작이 가능하며 다양한 플러그인을 지원합니다.",
+                "link": "https://sketchup.buildingpoint.co.kr/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/3d/3d-8.png",
+                "title": "Fusion 360",
                 "tags": [
                     "무료",
-                    "아이콘",
-                    "UI"
+                    "제품설계",
+                    "CAD"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "Autodesk의 제품 디자인 및 기계 설계용 3D CAD 툴로, 시뮬레이션과 CAM 기능도 함께 제공합니다.",
+                "link": "https://www.autodesk.com/kr/products/fusion-360/personal"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/3d/3d-9.png",
+                "title": "Tinkercad",
+                "tags": [
+                    "무료",
+                    "입문",
+                    "교육용"
+                ],
+                "description": "Autodesk에서 제공하는 웹 기반 3D 모델링 툴로, 초보자도 쉽게 사용할 수 있습니다. 모델링, 회로 설계, 코딩까지 지원합니다.",
+                "link": "https://www.tinkercad.com/"
             }
         ]
     },
@@ -252,44 +433,103 @@
         "icon": "fa-solid fa-film",
         "items": [
             {
-                "thumbnail": "./src/png/vector-1.png",
-                "title": "Adobe Illustrator",
+                "thumbnail": "./src/assets/images/tool/video/video-1.png",
+                "title": "Adobe Premiere Pro",
                 "tags": [
                     "유료",
-                    "로고",
-                    "일러스트"
+                    "전문편집",
+                    "Adobe연동"
                 ],
-                "description": "벡터 그래픽 디자인의 표준 툴. 아트보드, 패스, 그리드 기능 완비"
+                "description": "전문 영상 편집 툴로 방송, 광고, 유튜브 등 다양한 분야에서 사용되며 Adobe 제품군과의 연동성이 뛰어납니다.",
+                "link": "https://www.adobe.com/kr/products/premiere.html"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/video/video-2.png",
+                "title": "Final Cut Pro",
                 "tags": [
-                    "무료",
-                    "아이콘",
-                    "UI"
+                    "유료",
+                    "Mac전용",
+                    "전문편집"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "Mac 전용 고성능 영상 편집 툴로, 빠른 렌더링과 편리한 UI로 크리에이터와 전문가에게 인기가 많습니다.",
+                "link": "https://www.apple.com/kr/final-cut-pro/"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/video/video-3.png",
+                "title": "DaVinci Resolve",
                 "tags": [
                     "무료",
-                    "아이콘",
-                    "UI"
+                    "색보정",
+                    "전문편집"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "전문 색보정과 편집 기능을 갖춘 툴로, 영상 후반작업(컬러그레이딩)에 특화되어 있으며 무료 버전도 강력합니다.",
+                "link": "https://www.blackmagicdesign.com/products/davinciresolve"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/video/video-4.png",
+                "title": "Shotcut",
                 "tags": [
                     "무료",
-                    "아이콘",
-                    "UI"
+                    "입문자용",
+                    "오픈소스"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "오픈소스 기반의 영상 편집 툴로, 다양한 포맷을 지원하며 누구나 쉽게 사용할 수 있는 인터페이스를 제공합니다.",
+                "link": "https://www.shotcut.org/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/video/video-5.png",
+                "title": "HitFilm Express",
+                "tags": [
+                    "무료",
+                    "VFX",
+                    "초중급"
+                ],
+                "description": "기본적인 편집과 시각효과 기능을 모두 갖춘 툴로, 입문자부터 중급 사용자까지 폭넓게 사용할 수 있습니다.",
+                "link": "https://hitfilm-express.softonic.kr/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/video/video-6.png",
+                "title": "Camtasia",
+                "tags": [
+                    "유료",
+                    "강의제작",
+                    "녹화편집"
+                ],
+                "description": "교육 콘텐츠와 튜토리얼 제작에 최적화된 툴로, 화면 녹화 및 편집 기능이 간편하게 통합되어 있습니다.",
+                "link": "https://www.techsmith.com/camtasia/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/video/video-7.png",
+                "title": "VSDC Free Video Editor",
+                "tags": [
+                    "무료",
+                    "윈도우전용",
+                    "필터효과"
+                ],
+                "description": "Windows 전용 영상 편집 툴로, 다양한 필터와 효과를 제공하며 중간 수준의 영상 작업에 적합합니다.",
+                "link": "https://www.videosoftdev.com/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/video/video-8.png",
+                "title": "CapCut",
+                "tags": [
+                    "무료",
+                    "모바일",
+                    "템플릿"
+                ],
+                "description": "틱톡 및 모바일 콘텐츠 제작에 특화된 영상 편집 앱으로, 직관적인 사용성과 다양한 템플릿을 제공합니다.",
+                "link": "https://www.capcut.com/ko-kr"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/video/video-9.png",
+                "title": "Arkthinker",
+                "tags": [
+                    "무료",
+                    "웹기반",
+                    "간편편집"
+                ],
+                "description": "온라인에서 사용할 수 있는 간편한 웹 기반 유틸리티들을 제공하며, 전문 지식 없이도 누구나 쉽게 사용할 수 있도록 설계된 것이 특징입니다.",
+                "link": "https://www.arkthinker.com/ko/edit-video/imovie-change-aspect-ratio/"
             }
         ]
     },
@@ -298,44 +538,103 @@
         "icon": "fa-solid fa-bezier-curve",
         "items": [
             {
-                "thumbnail": "./src/png/vector-1.png",
-                "title": "Adobe Illustrator",
+                "thumbnail": "./src/assets/images/tool/motion/motion-1.png",
+                "title": "Adobe After Effects",
                 "tags": [
-                    "유료",
-                    "로고",
-                    "일러스트"
+                    "모션그래픽",
+                    "VFX",
+                    "유료"
                 ],
-                "description": "벡터 그래픽 디자인의 표준 툴. 아트보드, 패스, 그리드 기능 완비"
+                "description": "영상에 특수효과와 모션그래픽을 더할 수 있는 고급 편집 툴로, Adobe 제품군과의 연동이 뛰어납니다.",
+                "link": "https://www.adobe.com/products/aftereffects.html"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/motion/motion-2.png",
+                "title": "Blender",
                 "tags": [
-                    "무료",
-                    "아이콘",
-                    "UI"
+                    "3D애니메이션",
+                    "렌더링",
+                    "무료"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "오픈소스 기반의 3D 모델링 및 애니메이션 툴로, 물리 기반 렌더링과 캐릭터 리깅 등에 강점을 가집니다.",
+                "link": "https://www.blender.org/"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/motion/motion-3.png",
+                "title": "Cinema 4D",
                 "tags": [
-                    "무료",
-                    "아이콘",
-                    "UI"
+                    "3D모션",
+                    "모션그래픽",
+                    "유료"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "모션그래픽과 비주얼 이펙트 제작에 특화된 고성능 3D 툴로, 직관적인 UI와 빠른 렌더링 속도가 장점입니다.",
+                "link": "https://www.maxon.net/en/cinema-4d"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/motion/motion-4.png",
+                "title": "Adobe Animate",
                 "tags": [
-                    "무료",
-                    "아이콘",
-                    "UI"
+                    "2D애니메이션",
+                    "인터랙션",
+                    "유료"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "코드 없이도 인터랙티브 애니메이션을 제작할 수 있는 툴로, 게임 및 웹 애니메이션에 적합합니다.",
+                "link": "https://www.adobe.com/kr/products/animate.html"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/motion/motion-5.png",
+                "title": "Toon Boom Harmony",
+                "tags": [
+                    "2D애니메이션",
+                    "스튜디오툴",
+                    "유료"
+                ],
+                "description": "TV 애니메이션 및 영화 제작에 사용되는 전문가용 2D 애니메이션 툴로, 정밀한 타이밍과 레이어 작업이 가능합니다.",
+                "link": "https://www.toonboom.com/products/harmony"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/motion/motion-6.png",
+                "title": "Krita",
+                "tags": [
+                    "프레임애니메이션",
+                    "디지털드로잉",
+                    "무료"
+                ],
+                "description": "디지털 페인팅에 특화된 오픈소스 툴로, 프레임 단위의 애니메이션 기능도 제공되어 2D 작업에 적합합니다.",
+                "link": "https://krita.org/ko/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/motion/motion-7.png",
+                "title": "Synfig Studio",
+                "tags": [
+                    "벡터애니메이션",
+                    "오픈소스",
+                    "무료"
+                ],
+                "description": "벡터 기반 2D 애니메이션 제작 툴로, 키프레임과 모션 트윈 기능을 통해 부드러운 움직임을 구현할 수 있습니다.",
+                "link": "https://www.synfig.org/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/motion/motion-8.png",
+                "title": "OpenToonz",
+                "tags": [
+                    "2D애니메이션",
+                    "지브리사용툴",
+                    "무료"
+                ],
+                "description": "스튜디오 지브리에서도 사용한 2D 애니메이션 툴로, 다양한 디지털 이펙트와 타임라인 기능을 갖추고 있습니다.",
+                "link": "https://opentoonz.github.io/e/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/motion/motion-9.png",
+                "title": "Lottie",
+                "tags": [
+                    "벡터모션",
+                    "웹/앱연동",
+                    "무료"
+                ],
+                "description": "After Effects에서 제작한 JSON 기반 벡터 애니메이션을 웹과 앱에 삽입할 수 있도록 지원하는 라이브러리 및 플랫폼입니다.",
+                "link": "https://lottiefiles.com/kr/"
             }
         ]
     },
@@ -344,44 +643,103 @@
         "icon": "fa-regular fa-file",
         "items": [
             {
-                "thumbnail": "./src/png/vector-1.png",
-                "title": "Adobe Illustrator",
+                "thumbnail": "./src/assets/images/tool/edition/edit-1.png",
+                "title": "Adobe InDesign",
                 "tags": [
-                    "유료",
-                    "로고",
-                    "일러스트"
+                    "레이아웃편집",
+                    "출판디자인",
+                    "유료"
                 ],
-                "description": "벡터 그래픽 디자인의 표준 툴. 아트보드, 패스, 그리드 기능 완비"
+                "description": "출판 및 레이아웃 디자인에 특화된 툴로, 책, 잡지, 리플렛, 브로셔 제작에 널리 사용됩니다.",
+                "link": "https://www.adobe.com/kr/products/indesign.html"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/edition/edit-2.png",
+                "title": "Affinity Publisher",
                 "tags": [
-                    "무료",
-                    "아이콘",
-                    "UI"
+                    "편집디자인",
+                    "레이아웃편집",
+                    "유료"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "인디자인의 대안으로 주목받는 편집 디자인 툴로, 합리적인 가격과 직관적인 인터페이스가 장점입니다.",
+                "link": "https://affinity.serif.com/en-gb/publisher/?srsltid=AfmBOooD530VicuYvuKw6lgJf1c8zptlpxwjBq8hvjlLl_E6WJpjzmxQ"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/edition/edit-3.png",
+                "title": "Canva",
                 "tags": [
-                    "무료",
-                    "아이콘",
-                    "UI"
+                    "온라인편집",
+                    "간편디자인",
+                    "무료/유료"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "간단한 레이아웃 제작부터 프레젠테이션, 포스터, SNS 콘텐츠까지 다양한 편집 작업을 누구나 쉽게 할 수 있습니다.",
+                "link": "https://www.canva.com/ko_kr/"
             },
             {
-                "thumbnail": "./src/png/vector-2.png",
-                "title": "Inkscape",
+                "thumbnail": "./src/assets/images/tool/edition/edit-4.png",
+                "title": "Figma",
                 "tags": [
-                    "무료",
-                    "아이콘",
-                    "UI"
+                    "협업디자인",
+                    "온라인툴",
+                    "무료/유료"
                 ],
-                "description": "오픈소스 벡터 툴로, SVG 기반 디자인 제작 가능"
+                "description": "UI/UX 설계 도구지만, 협업 기반으로 다양한 편집 디자인도 가능해 점차 활용도가 높아지고 있습니다.",
+                "link": "https://www.figma.com/files/team/1493615205953617914/recents-and-sharing?fuid=1047483048297332924"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/edition/edit-5.png",
+                "title": "Microsoft Publisher",
+                "tags": [
+                    "입문용",
+                    "출판물제작",
+                    "유료"
+                ],
+                "description": "초보자도 쉽게 사용할 수 있는 간단한 편집 디자인 툴로, 워드 기반 환경에 익숙한 사용자에게 적합합니다.",
+                "link": "https://www.microsoft.com/ko-kr/microsoft-365/publisher"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/edition/edit-6.png",
+                "title": "Marq (Lucidpress)",
+                "tags": [
+                    "브랜딩디자인",
+                    "웹기반",
+                    "무료/유료"
+                ],
+                "description": "웹 기반으로 다양한 레이아웃 디자인을 제공하며, 마케팅 콘텐츠 제작에 적합합니다.",
+                "link": "https://www.marq.com/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/edition/edit-7.png",
+                "title": "Gravit Designer",
+                "tags": [
+                    "벡터편집",
+                    "크로스플랫폼",
+                    "무료/유료"
+                ],
+                "description": "벡터 기반이지만 간단한 인쇄물 및 편집 디자인에도 활용 가능하며, 크로스 플랫폼 지원이 특징입니다.",
+                "link": "https://app.corelvector.com/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/edition/edit-8.png",
+                "title": "VistaCreate",
+                "tags": [
+                    "템플릿디자인",
+                    "소셜콘텐츠",
+                    "무료/유료"
+                ],
+                "description": "Canva와 유사한 UI를 가진 온라인 디자인 툴로, 템플릿 기반의 편집이 강점이며 마케팅 콘텐츠 제작에 유용합니다.",
+                "link": "https://create.vista.com/"
+            },
+            {
+                "thumbnail": "./src/assets/images/tool/edition/edit-9.png",
+                "title": "Scribus",
+                "tags": [
+                    "출판디자인",
+                    "오픈소스",
+                    "무료"
+                ],
+                "description": "출판과 레이아웃 중심의 오픈소스 편집 툴로, 무료로 인디자인을 대체할 수 있는 유일한 툴 중 하나입니다.",
+                "link": "https://sourceforge.net/projects/scribus/"
             }
         ]
     }
