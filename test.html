@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>무한 패럴랙스 배경</title>
+    <style>
+        body {
+            margin: 0;
+            height: 3000px;
+            background: #f5f7fa;
+            overflow-x: hidden;
+        }
+
+        .parallax-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(356deg, #1683FF -2.16%, rgba(149, 226, 100, 0.30) 71.42%, rgba(223, 255, 245, 0.65) 110.36%);
+            will-change: transform;
+        }
+
+        .circle1 {
+            width: 850px;
+            height: 850px;
+            top: 50%;
+            left: 5%;
+        }
+
+        .circle2 {
+            width: 575px;
+            height: 575px;
+            left: 60%;
+        }
+
+        .circle3 {
+            width: 480px;
+            height: 480px;
+            left: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parallax-container">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+    </div>
+
+    <script>
+        const circles = document.querySelectorAll(".circle");
+        const basePositions = [
+            { top: 500 },   // px 기준
+            { top: 1500 },
+            { top: 2500 }
+        ];
+
+        const speeds = [0.2, 0.3, 0.4];
+
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+            const screenHeight = window.innerHeight;
+
+            circles.forEach((circle, i) => {
+                let baseTop = basePositions[i].top;
+                const speed = speeds[i];
+
+                let offsetY = baseTop - scrollY * speed;
+
+                // 원이 화면 위쪽을 벗어나면 아래로 리셋
+                if (offsetY + circle.offsetHeight < 0) {
+                    basePositions[i].top += screenHeight + circle.offsetHeight;
+                    offsetY = basePositions[i].top - scrollY * speed;
+                }
+
+                // translateY로 위치 조정
+                circle.style.transform = `translateY(${offsetY}px)`;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,3 +1,4 @@
+const circles = document.querySelectorAll(".circle");
 const wrap = document.getElementById("wrap");
 const category = document.getElementById('category');
 const categoryWrapper = document.querySelector(".category-inner");
@@ -6,6 +7,17 @@ let isScrollingByClick = false;
 let scrollTimer = null;
 
 const categoryItems = [];
+
+const speeds = [0.2, 0.2, 0.2]; 
+
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    circles.forEach((circle, index) => {
+        const speed = speeds[index] || 0.2;
+        circle.style.transform = `translateY(${-scrollY * speed}px)`;
+    });
+});
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
