@@ -11,15 +11,70 @@
 
 <body>
     <div class="parallax-container">
-        <div class="circle circle1"></div>
-        <div class="circle circle2"></div>
-        <div class="circle circle3"></div>
+        <div class="circle circle1">
+        </div>
+        <div class="circle circle2">
+        </div>
+        <div class="circle circle3">
+        </div>
     </div>
+
+    <!-- 1.Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./src/assets/logo/logo.svg" alt="다잇자너 로고" />
+                    </a>
+                </div>
+
+                <!-- Main Navigation Menu -->
+                <ul class="main-menu">
+                    <li><a href="./tool.html" role="button">툴</a></li>
+                    <li><a href="#" role="button">리소스</a></li>
+                    <li><a href="#" role="button">큐레이션</a></li>
+                    <li><a href="#" role="button">커뮤니티</a></li>
+                </ul>
+
+                <!-- Utility Menu -->
+                <div class="utility-menu">
+                    <i class="fa-solid fa-magnifying-glass" role="button" aria-label="검색"></i>
+                    <i class="fa-regular fa-user" role="button" aria-label="로그인"></i>
+                </div>
+            </nav>
+
+            <!-- Search Area -->
+            <div class="search-wrap">
+                <div class="inner">
+                    <div class="search">
+                        <div class="shadow"></div>
+                        <div class="textfield">
+                            <input type="text" placeholder="통합검색" />
+                            <i class="fa-solid fa-magnifying-glass" aria-label="검색"></i>
+                        </div>
+                        <div class="autocompletes">
+                            <h3>빠른 링크</h3>
+                            <ul>
+                                <li><a href="javascript:void(0)">Apple Store Online에서 쇼핑하기</a></li>
+                                <li><a href="javascript:void(0)">Apple Vision Pro</a></li>
+                                <li><a href="javascript:void(0)">AirPods</a></li>
+                                <li><a href="javascript:void(0)">Apple Store Online 이벤트</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <div id="category">
         <div class="category-inner">
         </div>
     </div>
+
+
     <div class="container">
 
         <div id="wrap">
@@ -45,7 +100,9 @@
             </div>
         </template>
 
-        <script src="/js/tool.js"></script>
+    </div>
+
+    <script src="/js/tool.js"></script>
 </body>
 
 </html>

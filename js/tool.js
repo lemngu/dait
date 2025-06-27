@@ -1,37 +1,42 @@
 const circles = document.querySelectorAll(".circle");
 const wrap = document.getElementById("wrap");
-const category = document.getElementById('category');
+const category = document.getElementById("category");
 const categoryWrapper = document.querySelector(".category-inner");
 const itemTemplate = document.getElementById("item-template");
+const header = document.querySelector("header");
+
 let isScrollingByClick = false;
 let scrollTimer = null;
-
 const categoryItems = [];
+const speeds = [0.2, 0.2, 0.2];
 
-const speeds = [0.2, 0.2, 0.2]; 
+// Header + Category 높이 반환 함수 (스크롤 offset 통일용)
+function getTotalOffset() {
+    const headerHeight = header.offsetHeight;
+    const categoryHeight = categoryWrapper.offsetHeight;
+    return headerHeight + categoryHeight;
+}
 
+// 배경 요소 패럴랙스
 window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
-
     circles.forEach((circle, index) => {
         const speed = speeds[index] || 0.2;
         circle.style.transform = `translateY(${-scrollY * speed}px)`;
     });
 });
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
-        category.classList.add('scrolled');
-    } else {
-        category.classList.remove('scrolled');
-    }
+// 카테고리 blur 효과 스크롤 처리
+window.addEventListener("scroll", () => {
+    category.classList.toggle("scrolled", window.scrollY > 0);
 });
 
+// 카테고리, 콘텐츠 불러오기
 fetch("./tools.json")
     .then((res) => res.json())
     .then((categories) => {
         categories.forEach((cat, index) => {
-            // 카테고리 생성
+            // 카테고리 아이템 생성
             const categoryItem = document.createElement("div");
             categoryItem.className = "category-item";
 
@@ -41,42 +46,38 @@ fetch("./tools.json")
             const label = document.createElement("p");
             label.textContent = cat.title;
 
-            categoryItem.appendChild(icon);
-            categoryItem.appendChild(label);
+            categoryItem.append(icon, label);
             categoryWrapper.appendChild(categoryItem);
             categoryItems.push(categoryItem);
 
-            if (index === 0) {
-                categoryItem.classList.add("active");
-            }
+            if (index === 0) categoryItem.classList.add("active");
 
-            // 클릭 시 해당 섹션으로 스크롤 + active 설정
+            // 클릭 시 섹션 이동 및 active 처리
             categoryItem.addEventListener("click", () => {
                 isScrollingByClick = true;
-
                 if (scrollTimer) clearTimeout(scrollTimer);
 
+                // active 먼저 수동으로 고정
                 categoryItems.forEach((item) => item.classList.remove("active"));
                 categoryItem.classList.add("active");
 
                 const target = document.getElementById(`section-${index}`);
                 if (target) {
-                    const categoryHeight = categoryWrapper.offsetHeight;
-                    const y =
-                        target.getBoundingClientRect().top + window.pageYOffset - categoryHeight;
+                    const y = target.getBoundingClientRect().top + window.pageYOffset - getTotalOffset();
                     window.scrollTo({ top: y, behavior: "smooth" });
                 }
 
-                // 새 타이머 등록 (가장 마지막 클릭 기준)
+                // 스크롤 이벤트 무시 시간 넉넉하게 확보
                 scrollTimer = setTimeout(() => {
                     isScrollingByClick = false;
-                }, 700); // scroll 애니메이션 시간 고려
+                }, 800); // ← 여기 700보다 조금 더 길게
             });
 
-            // 콘텐츠 생성
+
+            // 콘텐츠 섹션 생성
             const section = document.createElement("div");
             section.className = "section";
-            section.id = `section-${index}`; // 스크롤 타겟도 여기로
+            section.id = `section-${index}`;
 
             const sectionTitle = document.createElement("h2");
             sectionTitle.textContent = cat.title;
@@ -86,13 +87,18 @@ fetch("./tools.json")
 
             cat.items.forEach((data) => {
                 const itemClone = itemTemplate.content.cloneNode(true);
+
+                // 썸네일
                 itemClone.querySelector(".thumbnail").style.backgroundImage = `url(${data.thumbnail})`;
+
+                // 제목
                 itemClone.querySelector("h5").textContent = data.title;
 
-                // 링크 연결
+                // 링크
                 const linkElement = itemClone.querySelector(".thumbnail-link");
                 linkElement.href = data.link;
 
+                // 태그
                 const tagList = itemClone.querySelector(".tag-list");
                 tagList.innerHTML = "";
                 data.tags.forEach((tagText) => {
@@ -102,42 +108,36 @@ fetch("./tools.json")
                     tagList.appendChild(tag);
                 });
 
+                // 설명
                 itemClone.querySelector("p").textContent = data.description;
+
                 grid.appendChild(itemClone);
             });
 
-            window.addEventListener("scroll", () => {
-                if (isScrollingByClick) return; // 클릭 스크롤 중이면 무시
+            section.append(sectionTitle, grid);
+            wrap.appendChild(section);
+        });
 
-                const scrollPosition = window.pageYOffset;
-                const categoryHeight = categoryWrapper.offsetHeight;
+                // ✅ 스크롤 시 .active 처리
+        window.addEventListener("scroll", () => {
+            if (isScrollingByClick) return;
 
-                let currentIndex = 0;
+            const scrollPosition = window.pageYOffset;
+            const totalOffset = getTotalOffset();
+            let currentIndex = 0;
 
-                categories.forEach((cat, index) => {
-                    const section = document.getElementById(`section-${index}`);
-                    if (section) {
-                        const sectionTop = section.offsetTop - categoryHeight;
-
-                        if (scrollPosition >= sectionTop) {
-                            currentIndex = index;
-                        }
+            categories.forEach((_, index) => {
+                const section = document.getElementById(`section-${index}`);
+                if (section) {
+                    const sectionTop = section.offsetTop - totalOffset;
+                    if (scrollPosition >= sectionTop) {
+                        currentIndex = index;
                     }
-                });
-
-                // 활성화 토글
-                categoryItems.forEach((item, index) => {
-                    if (index === currentIndex) {
-                        item.classList.add("active");
-                    } else {
-                        item.classList.remove("active");
-                    }
-                });
+                }
             });
 
-
-            section.appendChild(sectionTitle);
-            section.appendChild(grid);
-            wrap.appendChild(section);
+            categoryItems.forEach((item, index) => {
+                item.classList.toggle("active", index === currentIndex);
+            });
         });
     });
