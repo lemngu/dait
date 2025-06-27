@@ -170,7 +170,7 @@ header nav .main-menu li {
     border-radius: 8px;
 }
 
-header nav .main-menu li a {
+header nav .main-menu a {
     padding: 0 10px;
     font-size: var(--button-large-size);
     font-weight: var(--font-medium);

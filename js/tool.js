@@ -35,6 +35,7 @@ function hideSearch() {
 const circles = document.querySelectorAll(".circle");
 const wrap = document.getElementById("wrap");
 const category = document.getElementById("category");
+const staticCategoryItem = document.querySelectorAll(".category-item");
 const categoryWrapper = document.querySelector(".category-inner");
 const itemTemplate = document.getElementById("item-template");
 const header = document.querySelector("header");
@@ -62,7 +63,13 @@ window.addEventListener("scroll", () => {
 
 // 카테고리 blur 효과 스크롤 처리
 window.addEventListener("scroll", () => {
-    category.classList.toggle("scrolled", window.scrollY > 0);
+    const scrolled = window.scrollY > 0;
+
+    category.classList.toggle("scrolled", scrolled);
+    // 최신 .category-item들을 매번 선택 (동적 대응)
+    document.querySelectorAll(".category-item").forEach((item) => {
+        item.classList.toggle("scrolled", scrolled);
+    });
 });
 
 // 카테고리, 콘텐츠 불러오기
