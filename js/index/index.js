@@ -1,20 +1,3 @@
-//메인 검색
-// const headerEl = document.querySelector('header')
-// const searchWrapEl = headerEl.querySelector('.search-wrap')
-// const searchStarterEl = headerEl.querySelector('.search-starter')
-// const searchShadowEl = searchWrapEl.querySelector('.shadow')
-
-// searchStarterEl.addEventListener('click', showSearch)
-// searchShadowEl.addEventListener('click',hideSearch)
-
-
-// function showSearch() {
-//   headerEl.classList.add('searching')
-// }
-// function hideSearch() {
-//   headerEl.classList.remove('searching')
-// }
-
 const searchStarterEl = document.querySelector('header .fa-magnifying-glass');
 const searchWrapEl = document.querySelector('.search-wrap');
 const shadowEl = document.querySelector('.search .shadow');
@@ -61,66 +44,125 @@ function random(min, max) {
 function floatingObject(selector, delay, size) {
   gsap.to(
     selector,
-    random(1.5, 2.5),
+    random(1.5, 2.5), 
     {
       y: size,
       repeat: -1,
       yoyo: true,
       ease: Power1.easeInOut,
       delay: random(0, delay)
-    });
+  });
 }
-floatingObject('.floating1', 1, 15);
-floatingObject('.floating2', .5, 15);
-floatingObject('.floating3', 1.5, 20);
-floatingObject('.floating4', 1, 15);
-floatingObject('.floating5', .5, 15);
-floatingObject('.floating6', 1.5, 20);
-floatingObject('.floating7', 1, 15);
-floatingObject('.floating8', .5, 15);
+floatingObject('.floating1', 1, 10);
+floatingObject('.floating2', .8, 10);
+floatingObject('.floating3', 1.2, 10);
+floatingObject('.floating4', 1, 10);
+floatingObject('.floating5', .8, 10);
+floatingObject('.floating6',  1.2, 10);
 
-//curation swiper
-new Swiper('.curation .swiper-container', {
-  direction: 'vertical',
-  slidesPerView: 3, //한번에 보여줄 슬라이드 개수
-  spaceBetween: 10, //슬라이드 사이 여백
-  centeredSlides: true, //1번 슬라이드가 가운데 보이기
-  loop: true,
-  autoplay: {
-    delay: 5000
-  }
+
+
+
+// 큐레이션
+        const thumbList = document.getElementById('thumbList');
+        const mainImage = document.getElementById('mainSlideImage');
+        const slideBar = document.getElementById('slideBar');
+        const thumbs = Array.from(thumbList.querySelectorAll('.thumb'));
+        const thumbWidth = 160;
+        const gap = 12;
+        const totalCount = thumbs.length;
+
+        // 현재 썸네일들의 순서를 저장하는 배열
+        let currentOrder = [0, 1, 2, 3, 4]; // 초기 순서
+
+        // 메인 이미지 업데이트 함수
+        function updateMainImage(index) {
+            // 실제 이미지 경로로 변경
+            const imagePaths = [
+                './src/assets/images/index/curation/curation-1.png',
+                './src/assets/images/index/curation/curation-2.png',
+                './src/assets/images/index/curation/curation-3.png',
+                './src/assets/images/index/curation/curation-4.png',
+                './src/assets/images/index/curation/curation-5.png'
+            ];
+            mainImage.src = imagePaths[index];
+            mainImage.alt = `메인 슬라이드 ${index + 1}`;
+        }
+
+        // 슬라이드 바 업데이트 함수 (원래 썸네일 번호에 따라 위치 결정)
+function updateSlideBar(originalIndex) {
+    const wrapper = document.querySelector('.slide-bar-wrapper');
+    const wrapperWidth = wrapper.getBoundingClientRect().width;
+
+    const slideBarWidth = wrapperWidth / totalCount;
+    const moveDistance = originalIndex * slideBarWidth;
+
+    slideBar.style.transform = `translateX(${moveDistance}px)`;
+}
+
+
+        // 썸네일 순서 재배치 함수
+        function reorderThumbnails(selectedIndex) {
+            // 선택된 인덱스를 맨 앞으로, 나머지는 순환하여 배치
+            const newOrder = [];
+
+            // 선택된 인덱스부터 시작
+            for (let i = 0; i < totalCount; i++) {
+                newOrder.push((selectedIndex + i) % totalCount);
+            }
+
+            // DOM 요소들을 새로운 순서로 재배치
+            newOrder.forEach((originalIndex, position) => {
+                const thumb = thumbs[originalIndex];
+                thumbList.appendChild(thumb);
+            });
+
+            // 현재 순서 업데이트
+            currentOrder = newOrder;
+
+            // transform을 0으로 리셋 (재배치했으므로)
+            thumbList.style.transform = 'translateX(0px)';
+
+            // 슬라이드 바는 원래 썸네일 번호에 따라 위치 유지 (재배치와 무관)
+            // updateSlideBar는 이미 클릭 이벤트에서 호출되므로 여기서는 호출하지 않음
+        }
+
+// 썸네일 클릭 이벤트
+thumbs.forEach((thumb, originalIndex) => {
+    thumb.addEventListener('click', () => {
+        updateMainImage(originalIndex);
+
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+
+        const currentPosition = currentOrder.indexOf(originalIndex);
+        updateSlideBar(originalIndex);
+
+        if (currentPosition === 0) return;
+
+        // 🔥 여기서 썸네일 실제 너비와 gap 가져오기
+        const thumbEl = thumbs[0]; // 아무 썸네일 하나 기준
+        const thumbWidth = thumbEl.getBoundingClientRect().width;
+        const computedStyle = window.getComputedStyle(thumbList);
+        const gap = parseFloat(computedStyle.columnGap || computedStyle.gap || 12); // fallback 12
+
+        const moveDistance = -currentPosition * (thumbWidth + gap);
+        thumbList.style.transition = 'transform 0.3s ease';
+        thumbList.style.transform = `translateX(${moveDistance}px)`;
+
+        setTimeout(() => {
+            thumbList.style.transition = 'none';
+            reorderThumbnails(originalIndex);
+
+            setTimeout(() => {
+                thumbList.style.transition = 'transform 0.3s ease';
+            }, 50);
+        }, 300);
+    });
 });
 
 
-/**
- * 페이지 스크롤에 따른 요소 제어
- */
-// 페이지 스크롤에 영향을 받는 요소들을 검색!
-const toTopEl = document.querySelector('#to-top')
-// 페이지에 스크롤 이벤트를 추가!
-// 스크롤이 지나치게 자주 발생하는 것을 조절(throttle, 일부러 부하를 줌)
-window.addEventListener('scroll', _.throttle(function () {
-  // 페이지 스크롤 위치가 500px이 넘으면.
-  if (window.scrollY > 500) {
-    // 상단으로 스크롤 버튼 보이기!
-    gsap.to(toTopEl, .2, {
-      x: 0
-    })
-
-    // 페이지 스크롤 위치가 500px이 넘지 않으면.
-  } else {
-    // 상단으로 스크롤 버튼 숨기기!
-    gsap.to(toTopEl, .2, {
-      x: 100
-    })
-  }
-}, 300))
-
-// 상단으로 스크롤 버튼을 클릭하면,
-// toTopEl.addEventListener('click', function () {
-//   // 페이지 위치를 최상단으로 부드럽게(0.7초 동안) 이동.
-//   gsap.to(window, .7, {
-//     scrollTo: 0
-//   })
-// });
+        // 초기 설정
+        updateMainImage(0);
+        updateSlideBar(0);
 

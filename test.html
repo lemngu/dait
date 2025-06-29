@@ -13,84 +13,281 @@
             overflow-x: hidden;
         }
 
-        .parallax-container {
-            position: fixed;
-            top: 0;
-            left: 0;
+        .curation {
             width: 100%;
-            height: 100vh;
-            pointer-events: none;
-            z-index: -1;
+            padding: 100px 0 0;
+        }
+
+        .curation-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* 상단 그룹 */
+        .curation-top {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        /* 소개 영역 */
+        .curation-info {
+            flex: 1;
+            max-width: 100%;
+        }
+
+        .curation-info h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .curation-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-gray-80, #666);
+        }
+
+        /* 메인 슬라이드 */
+        .main-view {
+            flex: 2;
+            width: 100%;
+            height: 100%;
             overflow: hidden;
         }
 
-        .circle {
+        .main-view img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumb-view {
+            width: 100%;
+            max-width: 1070px;
+            overflow: hidden;
+        }
+
+        .thumb-list {
+            display: flex;
+            gap: 12px;
+            transition: transform 0.5s ease;
+        }
+
+.thumb {
+    position: relative;
+    flex: 0 0 calc((1070px - 24px) / 3); /* 3등분 - gap 2개 */
+    width: calc((1070px - 24px) / 3);
+    aspect-ratio: 16 / 9; /* 자동으로 height 계산됨 (196.5px 정도) */
+    cursor: pointer;
+    border: 3px solid transparent;
+    overflow: hidden;
+    transition: border 0.3s ease;
+}
+
+        .thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* dim 레이어 */
+        .thumb-dim {
             position: absolute;
-            border-radius: 50%;
-            background: linear-gradient(356deg, #1683FF -2.16%, rgba(149, 226, 100, 0.30) 71.42%, rgba(223, 255, 245, 0.65) 110.36%);
-            will-change: transform;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            /* 기본 dim */
+            transition: background 0.3s ease, opacity 0.3s ease;
         }
 
-        .circle1 {
-            width: 850px;
-            height: 850px;
-            top: 50%;
-            left: 5%;
+        /* active 상태 - 밝게 */
+        .thumb.active .thumb-dim {
+            background: rgba(0, 0, 0, 0);
         }
 
-        .circle2 {
-            width: 575px;
-            height: 575px;
-            left: 60%;
+        /* active 테두리 강조 */
+        .thumb.active {
+
         }
 
-        .circle3 {
-            width: 480px;
-            height: 480px;
-            left: 30%;
+        .slide-bar-wrapper {
+            margin-top: 20px;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            position: relative;
+            max-width: 524px;
+            /* 썸네일 뷰와 동일한 너비 */
+        }
+
+        .slide-bar {
+            height: 100%;
+            width: 104.8px;
+            /* 전체 너비의 1/5 (524px / 5) */
+            background: #000;
+            border-radius: 2px;
+            transition: transform 0.3s ease;
+            position: absolute;
+            left: 0;
         }
     </style>
 </head>
 
 <body>
-    <div class="parallax-container">
-        <div class="circle circle1"></div>
-        <div class="circle circle2"></div>
-        <div class="circle circle3"></div>
-    </div>
+    <section class="curation">
+        <div class="curation-inner container">
+            <!-- 상단: 소개 + 메인 슬라이드 그룹 -->
+            <div class="curation-top">
+                <div class="curation-info">
+                    <h2>큐레이션 소개</h2>
+                    <p>큐레이션에서는 디자이너들의 실제 포트폴리오를 통해 어떤 툴과 리소스를 활용했는지 직접 확인할 수 있어요.</p>
+                </div>
+
+                <div class="main-view">
+                    <img id="mainSlideImage" src="./src/assets/images/index/curation/curation-1.png" alt="메인 슬라이드" />
+                </div>
+            </div>
+
+            <!-- 하단: 썸네일 및 슬라이드 바 -->
+            <div class="curation-bottom">
+                <div class="thumb-view" id="thumbView">
+                    <div class="thumb-list" id="thumbList">
+                        <div class="thumb active">
+                            <img src="./src/assets/images/index/curation/curation-1.png" alt="썸네일1">
+                            <div class="thumb-dim"></div>
+                        </div>
+                        <div class="thumb">
+                            <img src="./src/assets/images/index/curation/curation-2.png" alt="썸네일2">
+                            <div class="thumb-dim"></div>
+                        </div>
+                        <div class="thumb">
+                            <img src="./src/assets/images/index/curation/curation-3.png" alt="썸네일3">
+                            <div class="thumb-dim"></div>
+                        </div>
+                        <div class="thumb">
+                            <img src="./src/assets/images/index/curation/curation-4.png" alt="썸네일4">
+                            <div class="thumb-dim"></div>
+                        </div>
+                        <div class="thumb">
+                            <img src="./src/assets/images/index/curation/curation-5.png" alt="썸네일5">
+                            <div class="thumb-dim"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-bar-wrapper">
+                    <div class="slide-bar" id="slideBar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
-        const circles = document.querySelectorAll(".circle");
-        const basePositions = [
-            { top: 500 },   // px 기준
-            { top: 1500 },
-            { top: 2500 }
-        ];
+        const thumbList = document.getElementById('thumbList');
+        const mainImage = document.getElementById('mainSlideImage');
+        const slideBar = document.getElementById('slideBar');
+        const thumbs = Array.from(thumbList.querySelectorAll('.thumb'));
+        const thumbWidth = 160;
+        const gap = 12;
+        const totalCount = thumbs.length;
 
-        const speeds = [0.2, 0.3, 0.4];
+        // 현재 썸네일들의 순서를 저장하는 배열
+        let currentOrder = [0, 1, 2, 3, 4]; // 초기 순서
 
-        window.addEventListener("scroll", () => {
-            const scrollY = window.scrollY;
-            const screenHeight = window.innerHeight;
+        // 메인 이미지 업데이트 함수
+        function updateMainImage(index) {
+            // 실제 이미지 경로로 변경
+            const imagePaths = [
+                './src/assets/images/index/curation/curation-1.png',
+                './src/assets/images/index/curation/curation-2.png',
+                './src/assets/images/index/curation/curation-3.png',
+                './src/assets/images/index/curation/curation-4.png',
+                './src/assets/images/index/curation/curation-5.png'
+            ];
+            mainImage.src = imagePaths[index];
+            mainImage.alt = `메인 슬라이드 ${index + 1}`;
+        }
 
-            circles.forEach((circle, i) => {
-                let baseTop = basePositions[i].top;
-                const speed = speeds[i];
+        // 슬라이드 바 업데이트 함수 (원래 썸네일 번호에 따라 위치 결정)
+        function updateSlideBar(originalIndex) {
+            // 슬라이드바를 5등분하여 원래 썸네일 번호에 따라 위치 결정
+            const slideBarWidth = 104.8; // 전체 너비의 1/5
+            const moveDistance = originalIndex * slideBarWidth;
+            slideBar.style.transform = `translateX(${moveDistance}px)`;
+        }
 
-                let offsetY = baseTop - scrollY * speed;
+        // 썸네일 순서 재배치 함수
+        function reorderThumbnails(selectedIndex) {
+            // 선택된 인덱스를 맨 앞으로, 나머지는 순환하여 배치
+            const newOrder = [];
 
-                // 원이 화면 위쪽을 벗어나면 아래로 리셋
-                if (offsetY + circle.offsetHeight < 0) {
-                    basePositions[i].top += screenHeight + circle.offsetHeight;
-                    offsetY = basePositions[i].top - scrollY * speed;
-                }
+            // 선택된 인덱스부터 시작
+            for (let i = 0; i < totalCount; i++) {
+                newOrder.push((selectedIndex + i) % totalCount);
+            }
 
-                // translateY로 위치 조정
-                circle.style.transform = `translateY(${offsetY}px)`;
+            // DOM 요소들을 새로운 순서로 재배치
+            newOrder.forEach((originalIndex, position) => {
+                const thumb = thumbs[originalIndex];
+                thumbList.appendChild(thumb);
             });
-        });
-    </script>
 
+            // 현재 순서 업데이트
+            currentOrder = newOrder;
+
+            // transform을 0으로 리셋 (재배치했으므로)
+            thumbList.style.transform = 'translateX(0px)';
+
+            // 슬라이드 바는 원래 썸네일 번호에 따라 위치 유지 (재배치와 무관)
+            // updateSlideBar는 이미 클릭 이벤트에서 호출되므로 여기서는 호출하지 않음
+        }
+
+// 썸네일 클릭 이벤트
+thumbs.forEach((thumb, originalIndex) => {
+    thumb.addEventListener('click', () => {
+        updateMainImage(originalIndex);
+
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+
+        const currentPosition = currentOrder.indexOf(originalIndex);
+        updateSlideBar(originalIndex);
+
+        if (currentPosition === 0) return;
+
+        // 🔥 여기서 썸네일 실제 너비와 gap 가져오기
+        const thumbEl = thumbs[0]; // 아무 썸네일 하나 기준
+        const thumbWidth = thumbEl.getBoundingClientRect().width;
+        const computedStyle = window.getComputedStyle(thumbList);
+        const gap = parseFloat(computedStyle.columnGap || computedStyle.gap || 12); // fallback 12
+
+        const moveDistance = -currentPosition * (thumbWidth + gap);
+        thumbList.style.transition = 'transform 0.3s ease';
+        thumbList.style.transform = `translateX(${moveDistance}px)`;
+
+        setTimeout(() => {
+            thumbList.style.transition = 'none';
+            reorderThumbnails(originalIndex);
+
+            setTimeout(() => {
+                thumbList.style.transition = 'transform 0.3s ease';
+            }, 50);
+        }, 300);
+    });
+});
+
+
+        // 초기 설정
+        updateMainImage(0);
+        updateSlideBar(0);
+    </script>
 </body>
 
 </html>
