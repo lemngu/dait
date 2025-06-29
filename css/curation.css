@@ -696,32 +696,39 @@ footer {
     font-family: 'Pretendard', sans-serif;
 }
 
-.footer-inner {
+footer .container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1320px;
     margin: 0 auto;
 }
 
+/* 좌측 로고 */
 .footer-left {
-    max-width: 300px;
+    flex: 1;
+    /* ← 1:1 비율 설정 */
+    max-width: 100%;
 }
 
 .footer-logo {
-    width: 100px;
-    margin-top: 10px;
+    width: 160px;
 }
 
-.notice {
-    font-size: 14px;
-    color: #444;
-}
-
+/* 우측 메뉴 영역 */
 .footer-right {
+    flex: 1;
+    /* ← 1:1 비율 설정 */
     display: flex;
-    flex-wrap: wrap;
-    gap: 90px;
+    gap: 0;
+    /* 간격 제거: 내부에서 분배 */
+    justify-content: space-between;
+}
+
+/* 각 메뉴를 동일한 너비로 */
+.footer-menu {
+    flex: 1;
+    /* ← 균등 1:1:1 분배 */
+    padding-left: 30px;
 }
 
 .footer-menu h4 {
@@ -749,13 +756,33 @@ footer {
     color: #000;
 }
 
-.footer .btn {}
+.footer-menu .btn {
+    font-size: var(--button-medium-size);
+    padding: 4px 32px;
+    background-color: var(--color-gray-10);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-menu .btn:hover {
+    color: var(--color-gray-90);
+    background-color: var(--color-gray-30);
+}
+
 
 .footer-bottom {
-    border-top: 1px solid #eee;
-    margin-top: 30px;
+    max-width: 1070px;
+    margin: 0 auto;
     padding-top: 20px;
+    border-top: 1px solid #eee;
     font-size: 13px;
     color: #999;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6px;
+    text-align: left;
 }

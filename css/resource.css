@@ -501,6 +501,106 @@ header .search .autocompletes ul li:hover a {
 }
 
 
+footer {
+    background: #f9f9fc;
+    color: #444;
+    padding: 40px 20px;
+    font-family: 'Pretendard', sans-serif;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+/* 좌측 로고 */
+.footer-left {
+    flex: 1;
+    /* ← 1:1 비율 설정 */
+    max-width: 100%;
+}
+
+.footer-logo {
+    width: 160px;
+}
+
+/* 우측 메뉴 영역 */
+.footer-right {
+    flex: 1;
+    /* ← 1:1 비율 설정 */
+    display: flex;
+    gap: 0;
+    /* 간격 제거: 내부에서 분배 */
+    justify-content: space-between;
+}
+
+/* 각 메뉴를 동일한 너비로 */
+.footer-menu {
+    flex: 1;
+    /* ← 균등 1:1:1 분배 */
+    padding-left: 30px;
+}
+
+.footer-menu h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 6px;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-menu a:hover {
+    color: #000;
+}
+
+.footer-menu .btn {
+    font-size: var(--button-medium-size);
+    padding: 4px 32px;
+    background-color: var(--color-gray-10);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-menu .btn:hover {
+    color: var(--color-gray-90);
+    background-color: var(--color-gray-30);
+}
+
+
+.footer-bottom {
+    max-width: 1070px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 13px;
+    color: #999;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6px;
+    text-align: left;
+}
+
+
+
 @media (max-width: 768px) {
     h2 {
         font-size: 1.2rem;
