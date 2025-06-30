@@ -331,6 +331,7 @@ header .search .autocompletes ul li:hover a {
 /* News */
 .news {
     width: 1320px;
+    padding: 80px 0 200px 0;
     margin: 0 auto;
 }
 .news .inner {
@@ -343,13 +344,13 @@ header .search .autocompletes ul li:hover a {
     justify-content: space-between;
     align-items: center;
 }
-.news .inner .news-article h2.title {
+.news .inner h2.title {
     font-size: 40px;
     font-weight: 700;
+    line-height: 150%;
 }
 .news .inner p.name {
     font-size: 14px;
-    padding-top: 80px;
 }
 .news .inner .date {
     color: #777;
@@ -359,7 +360,7 @@ header .search .autocompletes ul li:hover a {
 .news .inner .main-image {
     width: 100%;
     height: auto;
-    margin-top: 48px;
+    margin-top: 40px;
     line-height: 150%;
 }
 
@@ -422,21 +423,23 @@ header .search .autocompletes ul li:hover a {
 }
 .news .news-section3 p {
     font-size: 16px;
-    font-weight: 150%;
+    line-height: 150%;
 }
 .news .inner .reference {
     display: block;
     margin-top: 106px;
 }
-.news .inner .reference {
+.news .inner .reference h4 {
     font-size: 28px;
     font-weight: 700;
     line-height: 150%;
 }
 .news .inner .reference a {
-    text-decoration: none;
-    color: #1D1D1D;
-    font-size: 16px;
+    text-decoration: underline;
+    color: var(--color-gray-90);
+    font-size: var(--body-medium-size);
+    line-height: 150%;
+    font-weight: 400;
 }
 
 /* Footer */
