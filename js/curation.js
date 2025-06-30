@@ -32,14 +32,6 @@ function hideSearch() {
 }
 
 
-new Swiper('.interview .swiper-container', {
-    autoplay: true,
-    spaceBetween: 24,
-    loop: true,
-    slidesPerView: 3
-});
-
-
 const portfolioData = [
     {
         img: '../src/assets/images/curation/portfolio/thumbnail-1.png',
@@ -200,54 +192,145 @@ portfolioList.addEventListener('click', (e) => {
 });
 
 
+// 인터뷰
+const interviewItems = [
+    {
+        thumbnail: "/src/assets/images/curation/interview/thumbnail/interview-1.png",
+        title: "하라 켄야, 말과 여백 사이",
+        description: "여백, 감각, 그리고 생각. 사물을 넘어 사고를 디자인한 하라 켄야의 인터뷰.",
+        date: "2025.06.29",
+        link: "/interview.html"
+    },
+    {
+        thumbnail: "/src/assets/images/curation/interview/thumbnail/interview-2.png",
+        title: "멘디니, 그가 남긴 문장들",
+        description: "디자인 너머, 감정과 철학을 말하던 멘디니의 기록들. 그가 남긴 말들을 모아 다시 읽습니다.",
+        date: "2025.06.22",
+        link: "#"
+    },
+    {
+        thumbnail: "/src/assets/images/curation/interview/thumbnail/interview-3.png",
+        title: "데이비드 카슨, 타이포그래피의 경계를 넘다",
+        description: "질서를 해체한 타이포그래퍼, 데이비드 카슨의 인터뷰를 모아보았습니다.",
+        date: "2025.06.15",
+        link: "#"
+    },
+    {
+        thumbnail: "/src/assets/images/curation/interview/thumbnail/interview-4.png",
+        title: "요시다 유니의 현실을 닮은 환상",
+        description: "CG가 아닌 실제 재료, 수작업이 주는 열정과 발견의 아름다움. 현실 속 불가사의를 좇는 디자이너, 요시다 유니의 창작 철학",
+        date: "2025.06.08",
+        link: "#"
+    },
+    {
+        thumbnail: "/src/assets/images/curation/interview/thumbnail/interview-5.png",
+        title: "브랜드가 아닌 이름으로: 디자이너 우영미",
+        description: "파리에서 자신의 이름을 내건 최초의 한국 디자이너, 우영미가 말하는 정체성, 우아함, 그리고 본질의 힘",
+        date: "2025.06.01",
+        link: "#"
+    }
+];
+
+const swiperWrapper = document.querySelector('.interview .swiper-wrapper');
+swiperWrapper.innerHTML = ''; // 초기화
+
+interviewItems.forEach(item => {
+    const slide = document.createElement('div');
+    slide.classList.add('swiper-slide');
+
+    slide.innerHTML = `
+        <a href="${item.link}" class="interview-link" target="_blank">
+            <div class="thumbnail">
+                <img src="${item.thumbnail}" alt="${item.title}" />
+            </div>
+            <div class="content">
+                <div class="text-wrap">
+                    <h3 class="title">${item.title}</h3>
+                    <p class="description">${item.description}</p>
+                </div>
+                <span class="date">${item.date}</span>
+            </div>
+        </a>
+    `;
+
+    swiperWrapper.appendChild(slide);
+});
+
+// 슬라이드 기능
+new Swiper('.interview .swiper-container', {
+    autoplay: true,
+    spaceBetween: 24,
+    loop: true,
+    slidesPerView: 3
+});
+
+
+// 뉴스
 const newsData = [
     {
         title: "비타민워터, ‘대담한 미니멀리즘’으로 돌아오다",
         date: "2025.06.18",
-        image: "../src/assets/images/curation/news/thumbnail-1.png"
+        summary: "비타민워터가 미니멀한 디자인으로 리브랜딩을 단행했다. 선명한 컬러와 심플한 타이포로 정제된 브랜드 이미지를 구축했다.",
+        image: "../src/assets/images/curation/news/thumbnail-1.png",
+        link: "/news.html"
     },
     {
         title: "디자이너의 야근을 줄이기 위한 추천 폰트",
         date: "2025.06.11",
-        image: "../src/assets/images/curation/news/thumbnail-2.png"
+        summary: "작업 속도를 높여주는 무료 폰트 10종을 소개한다. 시인성 중심의 서체로 디자이너들의 야근을 줄여준다.",
+        image: "../src/assets/images/curation/news/thumbnail-2.png",
+        link: "#"
     },
     {
         title: "2025 올해의 팬톤컬러 '모카무스'",
         date: "2025.06.04",
-        image: "../src/assets/images/curation/news/thumbnail-3.png"
+        summary: "따뜻한 브라운 톤의 ‘모카무스’가 팬톤컬러로 선정됐다. 감성과 연결을 강조하는 디자인 트렌드를 반영한다.",
+        image: "../src/assets/images/curation/news/thumbnail-3.png",
+        link: "#"
     },
     {
         title: "유튜브 로고 색상이 변경되었지만, 이제서야 사람들이 이를 알아차리고 있습니다",
         date: "2025.05.28",
-        image: "../src/assets/images/curation/news/thumbnail-4.png"
+        summary: "유튜브가 로고 색상을 미묘하게 변경했다. 접근성과 색 대비 향상을 위한 전략적 조정이다.",
+        image: "../src/assets/images/curation/news/thumbnail-4.png",
+        link: "#"
     }
 ];
-
-const newsGrid = document.getElementById("newsGrid");
 
 const [mainNews, ...sideNews] = newsData;
 
 const mainHTML = `
-    <div class="news-main">
-        <img src="${mainNews.image}" alt="${mainNews.title}">
-        <div class="news-content">
-        <h3>${mainNews.title}</h3>
-        <p class="date">${mainNews.date}</p>
+    <a href="${mainNews.link}" class="news-main">
+        <div class="thumbnail-frame">
+            <img src="${mainNews.image}" alt="${mainNews.title}">
         </div>
-    </div>
+        <div class="news-content">
+            <div class="news-header">
+                <h3>${mainNews.title}</h3>
+                <p class="date">${mainNews.date}</p>
+            </div>
+            <p class="summary">${mainNews.summary}</p>
+        </div>
+    </a>
 `;
 
 const sideHTML = sideNews
     .map(
         (item) => `
-    <div class="news-item">
-        <img src="${item.image}" alt="${item.title}">
-        <div class="news-content">
-        <h4>${item.title}</h4>
-        <p class="date">${item.date}</p>
-        </div>
-    </div>
-`)
+        <a href="${item.link}" class="news-item">
+            <div class="thumbnail-frame">
+                <img src="${item.image}" alt="${item.title}">
+            </div>
+            <div class="news-content">
+                <div class="news-header">
+                    <h4>${item.title}</h4>
+                    <p class="date">${item.date}</p>
+                </div>
+                <p class="summary">${item.summary}</p>
+            </div>
+        </a>
+    `
+    )
     .join("");
 
 newsGrid.innerHTML = `

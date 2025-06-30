@@ -36,6 +36,7 @@
     --color-gray-0: #ffffff;
     --color-gray-5: #F4F5F6;
     --color-gray-10: #E6E8EA;
+    --color-gray-20: #CDD1D5;
     --color-gray-30: #B1B8BE;
     --color-gray-70: #464C53;
     --color-gray-90: #1E2124;
@@ -57,6 +58,31 @@ body {
     margin: 0 auto;
     /* padding: 0 20px; */
 }
+
+/* Btn */
+.btn {
+    width: 128px;
+    height: 41px;
+    padding: 10px;
+    border: 2px solid #FFF;
+    background-color: #FFF;
+    border-radius: 20px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+    transition: .4s;
+}
+
+.btn:hover {
+    background-color: #333;
+    color: #FFF;
+}
+
+
 
 .parallax-container {
     position: fixed;
@@ -95,31 +121,21 @@ body {
     filter: blur(7.5px);
 }
 
-/* 오른쪽 중간 원 */
+/* 왼쪽 아래 큰 원 */
 .circle1 {
+    width: 40vw;
+    height: 40vw;
+    top: 10vh;
+    left: -15vw;
+}
+
+/* 오른쪽 중간 원 */
+.circle2 {
     width: 36vw;
     height: 36vw;
     top: 60vh;
     right: -15vw;
 }
-
-/* 왼쪽 아래 큰 원 */
-.circle2 {
-    width: 48vw;
-    height: 48vw;
-    top: 120vh;
-    left: -25vw;
-}
-
-/* 왼쪽 아래 작은 원 */
-.circle3 {
-    width: 30vw;
-    height: 30vw;
-    top: 200vh;
-    right: -10vw;
-}
-
-
 
 
 
@@ -419,6 +435,8 @@ header .search .autocompletes ul li:hover a {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
 }
 
 .thumbnail {
@@ -426,6 +444,21 @@ header .search .autocompletes ul li:hover a {
     height: 80px;
     background-size: cover;
     background-position: center;
+}
+
+.star-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--color-gray-20);
+    user-select: none;
+    transition: transform 0.2s ease;
+}
+
+.star-toggle.fa-solid {
+    color: gold;
 }
 
 .content {

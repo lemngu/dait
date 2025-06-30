@@ -22,7 +22,8 @@
     /* Heading */
     --heading-large-size: 40px;
     --heading-medium-size: 28px;
-    --heading-small-size: 18px;
+    --heading-small-size: 24px;
+    --heading-xsmall-size: 20px;
 
     /* Body */
     --body-large-size: 20px;
@@ -72,7 +73,7 @@ body {
 }
 
 /* 공통 섹션 스타일 */
-section{
+section {
     padding: 80px 0;
     /* border-bottom: 1px solid #e0e0e0; */
 }
@@ -434,7 +435,7 @@ header .search .autocompletes ul li:hover a {
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     text-align: left;
-    transition: box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .thumbnail-wrapper {
@@ -463,6 +464,7 @@ header .search .autocompletes ul li:hover a {
 
 .portfolio-item:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+    transform: scale(1.03);
 }
 
 .portfolio-item:hover .thumbnail-overlay {
@@ -563,24 +565,102 @@ span.likes .like-count {
     font-weight: 500;
 }
 
-.curation-interview .interview .swiper-container {
+.curation-interview .swiper-container {
     width: 100%;
     height: 100%;
     padding: 0 0 8px 0;
     overflow: hidden;
-}
-
-.curation-interview .interview .swiper-slide {
+    /* 슬라이드 넘침 방지 */
     position: relative;
-    transition: opacity 1s;
 }
 
-.swiper-slide img {
+.swiper-slide {
+    border-radius: 12px;
+    overflow: visible;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.15);
+    background: #fff;
+}
+
+.interview-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 썸네일 영역 */
+.thumbnail {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+/* dim 효과 */
+.thumbnail::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2); /* dim 색상 */
+    opacity: 1;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.thumbnail img {
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
     display: block;
-    border-radius: 12px;
-    box-shadow: 0px 1px 8px 1px rgba(135, 135, 135, 0.27), 0px -1px 2px 0px rgba(255, 255, 255, 0.15);
+
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 0;
+}
+
+/* hover 시 효과 */
+.swiper-slide:hover .thumbnail img {
+    transform: scale(1.05);
+}
+
+.swiper-slide:hover .thumbnail::after {
+    opacity: 0;
+}
+
+.content {
+    padding: 16px;
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: transparent;
+}
+
+.text-wrap {
+    margin-bottom: 8px;
+}
+
+
+.title {
+    font-size: var(--heading-xsmall-size);
+    font-weight: 700;
+    margin: 0 0 12px;
+}
+
+.description {
+    font-size: var(--body-medium-size);
+    line-height: 150%;
+    color: #666;
+}
+
+.date {
+    display: block;
+    text-align: right;
+    font-size: 0.85rem;
+    color: #aaa;
 }
 
 
@@ -611,36 +691,96 @@ span.likes .like-count {
     gap: 16px;
 }
 
-.news-main {
-    height: 100%;
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+/* 카드 전체 클릭 영역 설정 */
+.news-main,
+.news-item {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
     transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
 }
 
-.news-main img {
-    width: 100%;
-    height: auto;
-    display: block;
+.news-main {
+    height: 100%;
 }
 
 .news-item {
-    display: flex;
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease;
-    align-items: center;
+    flex-direction: row;
 }
 
-.news-item img {
+/* 메인 뉴스는 기존처럼 유지 */
+.news-main:hover,
+.news-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 썸네일 프레임 */
+.thumbnail-frame {
+    position: relative;
+    overflow: hidden;
+}
+
+/* dim 요소 추가 */
+
+/* .thumbnail-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+} */
+
+/* 호버 시 dim 활성화 */
+.news-main:hover .thumbnail-frame::after,
+.news-item:hover .thumbnail-frame::after {
+    opacity: 0;
+}
+
+/* 이미지 확대 애니메이션 */
+.thumbnail-frame img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+
+    position: relative;
+    z-index: 0;
+}
+
+/* 메인 뉴스 확대 비율 */
+.news-main:hover .thumbnail-frame img {
+    transform: scale(1.05);
+}
+
+/* 리스트 뉴스 확대 비율 */
+.news-item:hover .thumbnail-frame img {
+    transform: scale(1.08);
+}
+
+/* 이미지 크기 유지 (리스트 전용 스타일 보완) */
+.news-item .thumbnail-frame img {
     width: 200px;
     aspect-ratio: 1 / 1;
-    object-fit: cover;
     flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* 기존 구조 유지 */
+.news-main .news-content,
+.news-item .news-content {
+    padding: 16px;
 }
 
 .news-main .news-content {
@@ -658,6 +798,16 @@ span.likes .like-count {
     flex-direction: column;
 }
 
+
+
+.news-content .news-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+}
+
 .news-content h3 {
     font-size: var(--display-small-size);
     font-weight: bold;
@@ -665,9 +815,9 @@ span.likes .like-count {
 }
 
 .news-item h4 {
-    font-size: var(--heading-medium-size);
+    font-size: var(--heading-small-size);
     margin-bottom: 6px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .news-content h3,
@@ -677,6 +827,10 @@ span.likes .like-count {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.news-grid .date {
+    text-align: left;
 }
 
 .news-main .date {
@@ -691,6 +845,18 @@ span.likes .like-count {
 .news-item .date {
     color: var(--color-gray-50);
 }
+
+.news-content .summary {
+    color: var(--color-gray-50);
+    font-size: var(--body-medium-size);
+    line-height: 150%;
+}
+
+.news-main .summary {
+    font-size: var(--body-large-size);
+    line-height: 160%;
+}
+
 
 
 /* Footer */

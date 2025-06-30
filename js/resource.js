@@ -32,6 +32,31 @@ function hideSearch() {
 }
 
 
+const circles = document.querySelectorAll(".circle");
+
+let isScrollingByClick = false;
+let scrollTimer = null;
+const categoryItems = [];
+const speeds = [0.2, 0.2, 0.2];
+
+// Header + Category 높이 반환 함수 (스크롤 offset 통일용)
+function getTotalOffset() {
+    const headerHeight = header.offsetHeight;
+    const categoryHeight = categoryWrapper.offsetHeight;
+    return headerHeight + categoryHeight;
+}
+
+// 배경 요소 패럴랙스
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    circles.forEach((circle, index) => {
+        const speed = speeds[index] || 0.2;
+        circle.style.transform = `translateY(${-scrollY * speed}px)`;
+    });
+});
+
+
+
 const category = document.getElementById("category");
 const staticCategoryItem = document.querySelectorAll(".category-item");
 const header = document.querySelector("header");
@@ -94,7 +119,7 @@ function renderCategories(categories) {
             categoryItem.classList.add("active");
 
             currentCategoryIndex = index;
-            renderCategoryContent(index);
+            renderCategoryContent(index, 1);
         });
     });
 }
@@ -152,6 +177,20 @@ function renderCategoryContent(index, page = 1) {
             itemClone.querySelector(".thumbnail").style.backgroundImage = `url(${data.thumbnail})`;
             itemClone.querySelector("h5").textContent = data.title;
 
+                const starIcon = itemClone.querySelector(".star-toggle");
+                starIcon.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    if (starIcon.classList.contains("fa-regular")) {
+                        starIcon.classList.remove("fa-regular");
+                        starIcon.classList.add("fa-solid");
+                    } else {
+                        starIcon.classList.remove("fa-solid");
+                        starIcon.classList.add("fa-regular");
+                    }
+                });
+
             const linkElement = itemClone.querySelector(".thumbnail-link");
             linkElement.href = data.link;
 
@@ -188,10 +227,3 @@ function renderCategoryContent(index, page = 1) {
     section.append(sectionTitle, grid);
     wrap.appendChild(section);
 }
-
-// 선택된 카테고리 바꿀 때도 1페이지부터 시작
-// categoryItem 클릭 이벤트에서 이렇게 호출:
-categoryItem.addEventListener("click", () => {
-    currentCategoryIndex = index;
-    renderCategoryContent(index, 1); // 페이지 1부터 시작
-});
