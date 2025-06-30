@@ -330,8 +330,9 @@ header .search .autocompletes ul li:hover a {
 
 
 /* Interview*/
-.interview {
+section.interview {
     width: 1320px;
+    padding: 80px 0 200px 0;
     margin: 0 auto;
 }
 .interview .inner {
@@ -343,19 +344,21 @@ header .search .autocompletes ul li:hover a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 8px;
 }
-.interview .inner .interview-article h2.title {
+.interview .inner h2.title {
     font-size: 40px;
     font-weight: 700;
+    line-height: 150%;
 }
 .interview .inner p.name {
     font-size: 14px;
-    padding-top: 80px;
+    line-height: 150%;
 }
 .interview .inner .date {
     color: #777;
     font-size: 14px;
-    margin-top: 12px;
+    line-height: 150%;
 }
 .interview .inner .interview-img {
     width: 100%;
@@ -369,10 +372,11 @@ header .search .autocompletes ul li:hover a {
 .interview  .intro p {
     display: block;
     padding: 24px 0;
+    line-height: 150%;
 }
 
 .interview .inner .qa {
-
+    padding: 24px 0 80px 0;
 }
 .interview .inner .qa .interview-q {
     display: block;
@@ -387,7 +391,6 @@ header .search .autocompletes ul li:hover a {
     font-weight: 200;
 }
 .interview .outro {
-    width: 1320px;
     padding: 0;
 }
 .interview .outro p {
