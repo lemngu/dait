@@ -936,6 +936,7 @@ footer .container {
 .footer-menu .btn {
     font-size: var(--button-medium-size);
     padding: 4px 32px;
+    border: none;
     background-color: var(--color-gray-10);
     font-weight: 400;
     display: flex;

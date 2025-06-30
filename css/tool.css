@@ -588,6 +588,7 @@ footer .container {
     font-size: var(--button-medium-size);
     padding: 4px 32px;
     background-color: var(--color-gray-10);
+    border: none;
     font-weight: 400;
     display: flex;
     justify-content: center;
