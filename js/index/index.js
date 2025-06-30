@@ -2,7 +2,6 @@ const searchStarterEl = document.querySelector('header .fa-magnifying-glass');
 const searchWrapEl = document.querySelector('.search-wrap');
 const shadowEl = document.querySelector('.search .shadow');
 
-
 searchStarterEl.addEventListener('click', function (event) {
   event.stopPropagation()
   if (searchWrapEl.classList.contains('show')) {
@@ -12,9 +11,12 @@ searchStarterEl.addEventListener('click', function (event) {
   }
 })
 
-window.addEventListener('click', function () {
+window.addEventListener('click', function (event) {
+  // 자동 슬라이드로 인한 프로그래밍적 클릭은 무시
+  if (event.isTrusted === false) return;
   hideSearch()
 })
+
 searchWrapEl.addEventListener('click', function (event) {
   event.stopPropagation()
 })
@@ -146,10 +148,44 @@ function startAutoSlide() {
         // 현재 활성화된 인덱스에서 다음 인덱스로 이동
         const nextIndex = (currentActiveIndex + 1) % totalCount;
         
-        // 원본 썸네일 배열에서 직접 찾아서 클릭
-        const targetThumb = thumbs[nextIndex];
-        targetThumb.click();
+        // 프로그래밍적으로 슬라이드 변경 (클릭 이벤트 발생시키지 않음)
+        performSlideChange(nextIndex);
     }, 3000);
+}
+
+// 슬라이드 변경 함수 (클릭 이벤트 없이 직접 처리)
+function performSlideChange(originalIndex) {
+    // 현재 활성화된 인덱스 업데이트
+    currentActiveIndex = originalIndex;
+
+    updateMainImage(originalIndex);
+
+    thumbs.forEach(t => t.classList.remove('active'));
+    thumbs[originalIndex].classList.add('active');
+
+    const currentPosition = currentOrder.indexOf(originalIndex);
+    updateSlideBar(originalIndex);
+
+    if (currentPosition === 0) return;
+
+    // 썸네일 실제 너비와 gap 가져오기
+    const thumbEl = thumbs[0];
+    const thumbWidth = thumbEl.getBoundingClientRect().width;
+    const computedStyle = window.getComputedStyle(thumbList);
+    const gap = parseFloat(computedStyle.columnGap || computedStyle.gap || 12);
+
+    const moveDistance = -currentPosition * (thumbWidth + gap);
+    thumbList.style.transition = 'transform 0.3s ease';
+    thumbList.style.transform = `translateX(${moveDistance}px)`;
+
+    setTimeout(() => {
+        thumbList.style.transition = 'none';
+        reorderThumbnails(originalIndex);
+
+        setTimeout(() => {
+            thumbList.style.transition = 'transform 0.3s ease';
+        }, 50);
+    }, 300);
 }
 
 // 사용자 클릭 시 자동 슬라이드 시간 리셋
@@ -160,40 +196,12 @@ function resetAutoSlide() {
         
 // 썸네일 클릭 이벤트
 thumbs.forEach((thumb, originalIndex) => {
-    thumb.addEventListener('click', () => {
+    thumb.addEventListener('click', (event) => {
+        // 이벤트 버블링 방지 (검색창 닫힘 방지)
+        event.stopPropagation();
+        
         resetAutoSlide();
-
-        // 현재 활성화된 인덱스 업데이트
-        currentActiveIndex = originalIndex;
-
-        updateMainImage(originalIndex);
-
-        thumbs.forEach(t => t.classList.remove('active'));
-        thumb.classList.add('active');
-
-        const currentPosition = currentOrder.indexOf(originalIndex);
-        updateSlideBar(originalIndex);
-
-        if (currentPosition === 0) return;
-
-        // 🔥 여기서 썸네일 실제 너비와 gap 가져오기
-        const thumbEl = thumbs[0]; // 아무 썸네일 하나 기준
-        const thumbWidth = thumbEl.getBoundingClientRect().width;
-        const computedStyle = window.getComputedStyle(thumbList);
-        const gap = parseFloat(computedStyle.columnGap || computedStyle.gap || 12); // fallback 12
-
-        const moveDistance = -currentPosition * (thumbWidth + gap);
-        thumbList.style.transition = 'transform 0.3s ease';
-        thumbList.style.transform = `translateX(${moveDistance}px)`;
-
-        setTimeout(() => {
-            thumbList.style.transition = 'none';
-            reorderThumbnails(originalIndex);
-
-            setTimeout(() => {
-                thumbList.style.transition = 'transform 0.3s ease';
-            }, 50);
-        }, 300);
+        performSlideChange(originalIndex);
     });
 });
 
