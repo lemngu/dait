@@ -577,8 +577,13 @@ span.likes .like-count {
 .swiper-slide {
     border-radius: 12px;
     overflow: visible;
-    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.4s ease;
     background: #fff;
+}
+
+.swiper-slide:hover .thumbnail::after {
+    opacity: 0;
 }
 
 .interview-link {
@@ -599,7 +604,7 @@ span.likes .like-count {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.2); /* dim 색상 */
+    background:  rgba(0, 0, 0, 0.08);
     opacity: 1;
     transition: opacity 0.4s ease;
     pointer-events: none;
@@ -614,14 +619,14 @@ span.likes .like-count {
     object-fit: cover;
     display: block;
 
+    transform: scale(1.05);
     transition: transform 0.4s ease;
     position: relative;
     z-index: 0;
 }
 
-/* hover 시 효과 */
 .swiper-slide:hover .thumbnail img {
-    transform: scale(1.05);
+    transform: scale(1);
 }
 
 .swiper-slide:hover .thumbnail::after {
@@ -718,7 +723,7 @@ span.likes .like-count {
 /* 메인 뉴스는 기존처럼 유지 */
 .news-main:hover,
 .news-item:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* 썸네일 프레임 */
@@ -753,6 +758,7 @@ span.likes .like-count {
     aspect-ratio: 16 / 9;
     object-fit: cover;
     display: block;
+    transform: scale(1.05);
     transition: transform 0.4s ease;
 
     position: relative;
@@ -761,12 +767,12 @@ span.likes .like-count {
 
 /* 메인 뉴스 확대 비율 */
 .news-main:hover .thumbnail-frame img {
-    transform: scale(1.05);
+    transform: scale(1);
 }
 
 /* 리스트 뉴스 확대 비율 */
 .news-item:hover .thumbnail-frame img {
-    transform: scale(1.08);
+    transform: scale(1);
 }
 
 /* 이미지 크기 유지 (리스트 전용 스타일 보완) */
