@@ -597,7 +597,7 @@ section.hero {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   /* 기본 dim */
   transition: background 0.3s ease, opacity 0.3s ease;
 }
@@ -635,7 +635,9 @@ section.hero {
 
 
 /* 4. 랭킹 섹션 */
-.ranking .grid {}
+.ranking .grid {
+  
+}
 
 
 /* 5. 커뮤니티 섹션 */

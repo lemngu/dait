@@ -239,7 +239,7 @@ interviewItems.forEach(item => {
     slide.classList.add('swiper-slide');
 
     slide.innerHTML = `
-        <a href="${item.link}" class="interview-link" target="_blank">
+        <a href="${item.link}" class="interview-link">
             <div class="thumbnail">
                 <img src="${item.thumbnail}" alt="${item.title}" />
             </div>
