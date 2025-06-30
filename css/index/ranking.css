@@ -63,7 +63,7 @@
     padding: 8px 12px;
     border: none;
     border-radius: 8px;
-    background-color: white;
+    background-color: transparent;
     color: var(--color-gray-30);
     cursor: pointer;
     font-size: var(--caption-medium-size);

@@ -132,6 +132,20 @@ fetch("./tools.json")
                 // 썸네일
                 itemClone.querySelector(".thumbnail").style.backgroundImage = `url(${data.thumbnail})`;
 
+                const starIcon = itemClone.querySelector(".star-toggle");
+                starIcon.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    if (starIcon.classList.contains("fa-regular")) {
+                        starIcon.classList.remove("fa-regular");
+                        starIcon.classList.add("fa-solid");
+                    } else {
+                        starIcon.classList.remove("fa-solid");
+                        starIcon.classList.add("fa-regular");
+                    }
+                });
+
                 // 제목
                 itemClone.querySelector("h5").textContent = data.title;
 

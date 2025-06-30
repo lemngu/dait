@@ -517,12 +517,17 @@ span.likes {
 
 span.likes i {
     font-size: 20px;
-    color: var(--color-gray-50);
+    color: var(--color-gray-30);
+}
+
+.likes i.fa-solid {
+    color: #EE3E4D;
 }
 
 span.likes .like-count {
     width: 16px;
     font-size: var(--caption-medium-size);
+    color: var(--color-gray-50);
 }
 
 

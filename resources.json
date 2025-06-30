@@ -8,9 +8,9 @@
                 "link": "https://noonnu.cc/font_page/pick",
                 "title": "눈누",
                 "tags": [
-                    "한글폰트",
-                    "상업용",
-                    "무료"
+                    "#한글폰트",
+                    "#상업용",
+                    "#무료"
                 ],
                 "description": "무료 상업용 한글 폰트를 간편하게 제공하며, 사용자가 자유롭게 쓸 수 있는 폰트만 선별해 제공합니다. 깔끔한 UI로 다운로드 또는 CDN 방식 제공합니다."
             },
@@ -19,9 +19,9 @@
                 "link": "https://fonts.google.com/",
                 "title": "Goolgle Fonts",
                 "tags": [
-                    "웹폰트",
-                    "오픈소스",
-                    "무료"
+                    "#웹폰트",
+                    "#오픈소스",
+                    "#무료"
                 ],
                 "description": "무료 오픈소스 폰트를 제공하는 플랫폼으로 웹폰트 지원 및 다국어 폰트를 포함합니다. 웹에서 직접 적용 가능하고 라이선스 걱정 없이 사용 가능합니다."
             },
@@ -30,9 +30,9 @@
                 "link": "https://www.dafont.com/",
                 "title": "da font",
                 "tags": [
-                    "다양한 스타일",
-                    "개인용 폰트",
-                    "무료/유료"
+                    "#다양한 스타일",
+                    "#개인용 폰트",
+                    "#무료/유료"
                 ],
                 "description": "수천 종의 무료 또는 개인용 폰트를 제공하며 다양한 스타일로 분류되어 있습니다. 상업적 사용 가능 여부는 폰트마다 달라 반드시 확인이 필요합니다."
             },
@@ -41,9 +41,9 @@
                 "link": "https://font.co.kr",
                 "title": "fONCO",
                 "tags": [
-                    "고품질",
-                    "한글전용",
-                    "유료"
+                    "#고품질",
+                    "#한글전용",
+                    "#유료"
                 ],
                 "description": "고퀄리티 한글 전용 폰트를 제공하며, 인쇄 및 영상 디자인에 적합한 감각적인 폰트를 제공합니다. 기업 라이선스 맞춤 제공합니다."
             },
@@ -52,9 +52,9 @@
                 "link": "https://www.sandollcloud.com/?lang=ko_KR",
                 "title": "산돌구름",
                 "tags": [
-                    "기업폰트",
-                    "프리미엄폰트",
-                    "유료"
+                    "#기업폰트",
+                    "#프리미엄폰트",
+                    "#유료"
                 ],
                 "description": "국내 최대 규모의 프리미엄 폰트 플랫폼으로, 수백 종의 고품질 폰트를 월 구독형으로 제공하며 웹폰트 및 임베딩도 가능합니다."
             },
@@ -63,9 +63,9 @@
                 "link": "https://fonts2u.com/",
                 "title": "FONT2U",
                 "tags": [
-                    "출판폰트",
-                    "웹폰트",
-                    "유료"
+                    "#출판폰트",
+                    "#웹폰트",
+                    "#유료"
                 ],
                 "description": "국내외 프리미엄 폰트를 제공하는 플랫폼으로, 다양한 디자인에 적합한 라이선스별 웹폰트 및 인쇄용 폰트를 제공합니다."
             },
@@ -74,9 +74,9 @@
                 "link": "https://www.asiafont.com/",
                 "title": "아시아폰트",
                 "tags": [
-                    "패키지폰트",
-                    "인쇄디자인",
-                    "유료"
+                    "#패키지폰트",
+                    "#인쇄디자인",
+                    "#유료"
                 ],
                 "description": "감성적인 스타일의 한글 폰트를 다양하게 제공하며 인쇄, 출판, 영상 등 다양한 분야에 적합한 패키지 구매가 가능합니다."
             },
@@ -85,9 +85,9 @@
                 "link": "https://www.rixfontcloud.com/",
                 "title": "RixFont클라우드",
                 "tags": [
-                    "창의폰트",
-                    "디자인폰트",
-                    "유료"
+                    "#창의폰트",
+                    "#디자인폰트",
+                    "#유료"
                 ],
                 "description": "독특하고 창의적인 스타일의 디자인용 폰트를 제공하며, 비교적 저렴한 패키지로 창의적인 프로젝트에 적합합니다."
             },
@@ -96,9 +96,9 @@
                 "link": "https://www.design210.com/cloud/",
                 "title": "디자인210",
                 "tags": [
-                    "감성폰트",
-                    "트렌디폰트",
-                    "유료"
+                    "#감성폰트",
+                    "#트렌디폰트",
+                    "#유료"
                 ],
                 "description": "트렌디하고 감성적인 한글 폰트를 중심으로 웹폰트 및 출력용 폰트를 제공하며, 라이선스 옵션이 명확하게 구분되어 있습니다."
             },
@@ -129,79 +129,56 @@
     {
         "title": "아이콘",
         "icon": "fa-solid fa-pen-nib",
-        "items": [
-            
-        ]
+        "items": []
     },
     {
         "title": "컬러",
         "icon": "fa-solid fa-pen-nib",
-        "items": [
-            
-        ]
+        "items": []
     },
     {
         "title": "이미지",
         "icon": "fa-solid fa-pen-nib",
-        "items": [
-            
-        ]
+        "items": []
     },
     {
         "title": "애니메이션",
         "icon": "fa-solid fa-pen-nib",
-        "items": [
-            
-        ]
+        "items": []
     },
     {
         "title": "목업",
         "icon": "fa-solid fa-pen-nib",
-        "items": [
-            
-        ]
-    }
-    ,
+        "items": []
+    },
     {
         "title": "AI",
         "icon": "fa-solid fa-pen-nib",
-        "items": [
-            
-        ]
+        "items": []
     },
     {
         "title": "사운드소스",
         "icon": "fa-solid fa-pen-nib",
-        "items": [
-            
-        ]
+        "items": []
     },
     {
         "title": "3D소스",
         "icon": "fa-solid fa-pen-nib",
-        "items": [
-            
-        ]
+        "items": []
     },
     {
         "title": "디자인시스템",
         "icon": "fa-solid fa-pen-nib",
-        "items": [
-            
-        ]
+        "items": []
     },
     {
         "title": "코딩소스",
         "icon": "fa-solid fa-pen-nib",
-        "items": [
-            
-        ]
+        "items": []
     },
     {
         "title": "레퍼런스",
         "icon": "fa-solid fa-pen-nib",
-        "items": [
-            
-        ]
+        "items": []
     }
 ]

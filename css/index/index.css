@@ -518,18 +518,18 @@ section.hero {
 .curation-info {
   flex: 1;
   max-width: 100%;
+  color: var(--color-gray-90);
 }
 
 .curation-info h2 {
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 16px;
+  font-size: var(--heading-large-size);
+  font-weight: 700;
+  margin-bottom: 24px;
 }
 
 .curation-info p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--color-gray-80, #666);
+  font-size: var(--body-medium-size);
+  line-height: 150%;
 }
 
 /* 메인 슬라이드 */
