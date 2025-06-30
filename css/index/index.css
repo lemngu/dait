@@ -635,7 +635,9 @@ section.hero {
 
 
 /* 4. 랭킹 섹션 */
-.ranking .grid {}
+.ranking .grid {
+  
+}
 
 
 /* 5. 커뮤니티 섹션 */
